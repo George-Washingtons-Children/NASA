@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://blb281o2arvhi"]
+[gd_scene load_steps=2 format=3 uid="uid://blb281o2arvhi"]
+
+[ext_resource type="Texture2D" uid="uid://6rcuykwh8dph" path="res://Sprites/free ren idle.png" id="1_qrlms"]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(4, -2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qrlms")
