@@ -9,7 +9,7 @@ var invinTime = 0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-# 9.81 m/s^2 = earth gravity, gravity set to 980
+# 9.81 m/s^2 = earth gravity, default gravity set to 980
 # 1.4 m/2^2 = titan gravity
 # 980 / 9.81 * 1.4 = 139.857
 
