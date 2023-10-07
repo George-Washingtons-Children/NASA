@@ -3,6 +3,10 @@ extends CharacterBody2D
 var health = 10
 var invinCount = 5
 var invinTime = 0
+var oxygen = 1000
+var malfunctioning = false
+
+var rng = RandomNumberGenerator.new()
 
 @export var SPEED = 300.0
 @export var JUMP_VELOCITY = -400.0
@@ -14,6 +18,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 # 980 / 9.81 * 1.4 = 139.857
 
 func _physics_process(delta):
+	rng.randomize()
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -44,6 +49,26 @@ func _physics_process(delta):
 
 	if (invinTime > 0):
 		invinTime -= delta
+	
+	if (oxygen >= 0 and get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
+		oxygen -= delta * 2
+		if (oxygen < 0):
+			print("death by axphixiation")
+			
+	
+	if (get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
+		get_node("MalfunctionTimer").set_paused(false)
+	else:
+		get_node("MalfunctionTimer").set_paused(true)
+	
 
 func _on_pickup_area_entered(area):
 	print("pickup")
+
+
+func _on_malfunction_timer_timeout():
+	var mal = rng.randi_range(1, 10)
+	if (mal == 1):
+		malfunctioning = true
+	print(mal)
+	print(malfunctioning)
