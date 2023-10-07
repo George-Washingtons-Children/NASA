@@ -13,4 +13,7 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			var tilepos = local_to_map(event.position)
-			erase_cell(0, tilepos)
+			print(get_cell_source_id(0, tilepos))
+			if (get_cell_source_id(0, tilepos) == 2):
+				print(get_cell_atlas_coords(0, tilepos))
+				set_cell(0, tilepos, 1, Vector2i(1,1), 0)
