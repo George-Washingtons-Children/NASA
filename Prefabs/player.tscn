@@ -15,3 +15,9 @@ texture = ExtResource("2_qh4wd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_kct4l")
+
+[node name="MalfunctionTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="MalfunctionTimer" to="." method="_on_malfunction_timer_timeout"]
