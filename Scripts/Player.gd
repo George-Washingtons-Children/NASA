@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+var health = 5
 
 @export var SPEED = 300.0
 @export var JUMP_VELOCITY = -400.0
@@ -28,3 +29,12 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+	print(get_slide_collision_count())
+	
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		if collision.get_collider().is_in_group("enemy"):
+			print("collided")
+			velocity.x = direction * SPEED * -1;
+			print(velocity.x)

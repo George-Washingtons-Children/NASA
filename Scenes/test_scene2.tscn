@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://blb281o2arvhi"]
+[gd_scene load_steps=4 format=3 uid="uid://blb281o2arvhi"]
 
 [ext_resource type="PackedScene" uid="uid://cmu8u2xsw2o55" path="res://Prefabs/Levels/level_design.tscn" id="1_j8tlr"]
 [ext_resource type="PackedScene" uid="uid://jbrvvua7jm0x" path="res://Prefabs/player.tscn" id="2_0raw3"]
+[ext_resource type="PackedScene" uid="uid://0q525ldtw4m7" path="res://Prefabs/obstacle.tscn" id="3_ryn5v"]
 
 [node name="Test Scene 2" type="Node2D"]
 
@@ -10,3 +11,6 @@ layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 0, 131072, 1, 0, 131073,
 
 [node name="Player" parent="." instance=ExtResource("2_0raw3")]
 position = Vector2(320, 560)
+
+[node name="obstacle" parent="." instance=ExtResource("3_ryn5v")]
+position = Vector2(456, 520)

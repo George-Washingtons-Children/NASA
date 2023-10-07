@@ -16,4 +16,4 @@ func _input(event):
 			print(get_cell_source_id(0, tilepos))
 			if (get_cell_source_id(0, tilepos) == 2):
 				print(get_cell_atlas_coords(0, tilepos))
-				set_cell(0, tilepos, 1, Vector2i(1,1), 0)
+				set_cell(0, tilepos, 1, Vector2i(1,1))

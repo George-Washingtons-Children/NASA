@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dr84if3wlfcgq"]
+[gd_scene load_steps=4 format=3 uid="uid://dr84if3wlfcgq"]
 
 [ext_resource type="PackedScene" uid="uid://cmu8u2xsw2o55" path="res://Prefabs/Levels/level_design.tscn" id="1_3wgmd"]
 [ext_resource type="PackedScene" uid="uid://jbrvvua7jm0x" path="res://Prefabs/player.tscn" id="1_j3wgp"]
+[ext_resource type="PackedScene" uid="uid://0q525ldtw4m7" path="res://Prefabs/obstacle.tscn" id="3_vyxuk"]
 
 [node name="Test Scene" type="Node2D"]
 
@@ -9,3 +10,6 @@
 
 [node name="Player" parent="." instance=ExtResource("1_j3wgp")]
 position = Vector2(568, 528)
+
+[node name="obstacle" parent="." instance=ExtResource("3_vyxuk")]
+position = Vector2(360, 528)
