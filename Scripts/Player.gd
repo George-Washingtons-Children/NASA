@@ -3,6 +3,7 @@ extends CharacterBody2D
 var health = 5
 var invinCount = 5
 var invinTime = 0
+var oxygen = 1000
 
 @export var SPEED = 300.0
 @export var JUMP_VELOCITY = -400.0
@@ -44,6 +45,10 @@ func _physics_process(delta):
 
 	if (invinTime > 0):
 		invinTime -= delta
+	
+	if (oxygen >= 0):
+		oxygen -= delta * 2
+		print(oxygen)
 
 func _on_pickup_area_entered(area):
 	print("pickup")
