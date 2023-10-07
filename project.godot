@@ -19,10 +19,6 @@ config/icon="res://icon.svg"
 
 Global="*res://Scripts/System Manager.gd"
 
-[display]
-
-window/size/mode=2
-
 [physics]
 
 2d/default_gravity=139.857
