@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 var health = 5
+var invinCount = 5
+var invinTime = 0
 
 @export var SPEED = 300.0
 @export var JUMP_VELOCITY = -400.0
@@ -15,7 +17,6 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -30,11 +31,14 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-	print(get_slide_collision_count())
-	
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
-		if collision.get_collider().is_in_group("enemy"):
+		if collision.get_collider().is_in_group("enemy") and invinTime <= 0:
 			print("collided")
-			velocity.x = direction * SPEED * -1;
-			print(velocity.x)
+			velocity.x = move_toward(-1 * velocity.x, 0, -1 * SPEED)
+			invinTime = invinCount
+			health -= 1
+			print(health)
+
+	if (invinTime > 0):
+		invinTime -= delta
