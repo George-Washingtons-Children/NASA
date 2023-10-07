@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var health = 5
+var health = 10
 var invinCount = 5
 var invinTime = 0
 
