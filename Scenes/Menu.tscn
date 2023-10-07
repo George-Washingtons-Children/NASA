@@ -1,37 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dkibrjdcyv38"]
+[gd_scene load_steps=6 format=3 uid="uid://dr84if3wlfcgq"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_ucto8"]
 [ext_resource type="PackedScene" uid="uid://7fpit5qtg3pi" path="res://Prefabs/system_manager.tscn" id="2_gxvuv"]
 [ext_resource type="PackedScene" uid="uid://cmu8u2xsw2o55" path="res://Prefabs/Levels/level_design.tscn" id="3_u1udo"]
 [ext_resource type="PackedScene" uid="uid://kg30ni6t80a" path="res://Prefabs/pickup.tscn" id="4_devgi"]
-[ext_resource type="PackedScene" uid="uid://jbrvvua7jm0x" path="res://Prefabs/player.tscn" id="5_u06gf"]
 [ext_resource type="PackedScene" uid="uid://0q525ldtw4m7" path="res://Prefabs/obstacle.tscn" id="6_4mgiw"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6ytv"]
-size = Vector2(32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_t46rq"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"Idle",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"death",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"hurt",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"walking",
-"speed": 5.0
-}]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_ucto8")
@@ -42,16 +15,6 @@ script = ExtResource("1_ucto8")
 
 [node name="pickup" parent="." instance=ExtResource("4_devgi")]
 position = Vector2(776, 528)
-
-[node name="Player" parent="." instance=ExtResource("5_u06gf")]
-position = Vector2(568, 528)
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player"]
-shape = SubResource("RectangleShape2D_i6ytv")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-sprite_frames = SubResource("SpriteFrames_t46rq")
-animation = &"hurt"
 
 [node name="obstacle" parent="." instance=ExtResource("6_4mgiw")]
 position = Vector2(360, 528)
@@ -94,7 +57,6 @@ text = "Controls:"
 horizontal_alignment = 1
 metadata/_edit_group_ = true
 
-[connection signal="area_entered" from="pickup" to="Player" method="_on_pickup_area_entered"]
 [connection signal="body_entered" from="pickup" to="System Manager" method="_on_pickup_body_entered"]
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
