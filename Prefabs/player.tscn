@@ -1,10 +1,33 @@
-[gd_scene load_steps=4 format=3 uid="uid://jbrvvua7jm0x"]
+[gd_scene load_steps=5 format=3 uid="uid://jbrvvua7jm0x"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_xjkh7"]
 [ext_resource type="Texture2D" uid="uid://bligaivhblv8d" path="res://Sprites/temp player.png" id="2_qh4wd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kct4l"]
 size = Vector2(32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l8665"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_xjkh7")
@@ -15,3 +38,7 @@ texture = ExtResource("2_qh4wd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_kct4l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_l8665")
+animation = &"Idle"

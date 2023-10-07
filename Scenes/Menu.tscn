@@ -57,44 +57,42 @@ animation = &"hurt"
 position = Vector2(360, 528)
 
 [node name="PlayButton" type="Button" parent="."]
-offset_left = 452.0
-offset_top = 152.0
-offset_right = 635.0
-offset_bottom = 238.0
+offset_left = 434.0
+offset_top = 89.0
+offset_right = 696.0
+offset_bottom = 212.0
 text = "PLAY"
 
 [node name="QuitButton" type="Button" parent="."]
-offset_left = 453.0
-offset_top = 254.0
-offset_right = 636.0
-offset_bottom = 340.0
+offset_left = 435.0
+offset_top = 270.0
+offset_right = 697.0
+offset_bottom = 392.0
 text = "EXIT GAME"
 
 [node name="Label" type="Label" parent="."]
 modulate = Color(0, 0, 0, 1)
-offset_left = 706.0
-offset_top = 155.0
-offset_right = 923.0
-offset_bottom = 285.0
-text = "Controls:
-W - Jump
+offset_left = 798.0
+offset_top = 209.0
+offset_right = 1015.0
+offset_bottom = 313.0
+text = "W - Jump
 A/D - Movement
 Hold left click - Break blocks
-CONTROL - EXAMPLE
+something - Place blocks
 "
 vertical_alignment = 1
+metadata/_edit_group_ = true
 
 [node name="Label2" type="Label" parent="."]
 modulate = Color(0, 0, 0, 1)
-offset_left = 899.0
-offset_top = 181.0
-offset_right = 1042.0
-offset_bottom = 285.0
-text = "Jump
-Movement
-Break blocks
-place blocks"
-horizontal_alignment = 2
+offset_left = 796.0
+offset_top = 178.0
+offset_right = 1014.0
+offset_bottom = 204.0
+text = "Controls:"
+horizontal_alignment = 1
+metadata/_edit_group_ = true
 
 [connection signal="area_entered" from="pickup" to="Player" method="_on_pickup_area_entered"]
 [connection signal="body_entered" from="pickup" to="System Manager" method="_on_pickup_body_entered"]
