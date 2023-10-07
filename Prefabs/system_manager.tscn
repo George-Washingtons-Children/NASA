@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://Scripts/System Manager.gd" id="1_70cgf"]
 
-[node name="System Manager" type="Node2D"]
+[node name="System Manager" type="Node"]
 script = ExtResource("1_70cgf")
