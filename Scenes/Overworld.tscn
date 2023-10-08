@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c85d6ofwjfaui"]
+[gd_scene load_steps=4 format=3 uid="uid://blb281o2arvhi"]
 
 [ext_resource type="PackedScene" uid="uid://cmu8u2xsw2o55" path="res://Prefabs/Levels/level_design.tscn" id="1_cy1aq"]
 [ext_resource type="PackedScene" uid="uid://jbrvvua7jm0x" path="res://Prefabs/player.tscn" id="2_n0pkd"]
@@ -16,19 +16,39 @@ position = Vector2(330, 560)
 position = Vector2(456, 520)
 
 [node name="UI" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
 
 [node name="HealthBar" type="ProgressBar" parent="UI"]
-offset_left = 929.0
-offset_top = 10.0
-offset_right = 1144.0
-offset_bottom = 37.0
-max_value = 1000.0
-step = 1.0
+modulate = Color(1, 0.160784, 0.121569, 1)
+anchors_preset = -1
+anchor_left = 0.44184
+anchor_top = 0.532407
+anchor_right = 0.618056
+anchor_bottom = 0.575617
+offset_left = -1.52588e-05
+offset_right = -3.05176e-05
+offset_bottom = -1.90735e-05
+grow_horizontal = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Health bar"
+step = 3.0
+value = 99.0
+fill_mode = 1
+show_percentage = false
+metadata/_edit_use_anchors_ = true
 
 [node name="HungerBar" type="ProgressBar" parent="UI"]
-offset_left = 929.0
-offset_top = 41.0
-offset_right = 1144.0
-offset_bottom = 68.0
-max_value = 5.0
-step = 0.1
+modulate = Color(0.976471, 0.435294, 0, 1)
+anchors_preset = -1
+anchor_left = 0.44184
+anchor_top = 0.578704
+anchor_right = 0.618924
+anchor_bottom = 0.623457
+offset_left = -1.52588e-05
+tooltip_text = "Hunger bar"
+step = 3.0
+value = 99.0
+fill_mode = 1
+show_percentage = false
+metadata/_edit_use_anchors_ = true
