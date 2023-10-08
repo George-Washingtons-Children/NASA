@@ -41,8 +41,20 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-	if(velocity.x == 0):
+	if(velocity.x == 0 && velocity.y == 0 && is_on_floor()):
 		$AnimationPlayer.play("Idle");
+	elif(velocity.y < 0 && !is_on_floor()):
+		$AnimationPlayer.play ("Jump");
+		if(velocity.x < 0):
+			get_node("Sprite2D").flip_h = false;
+		elif(velocity.x > 0):
+			get_node("Sprite2D").flip_h = true;
+	elif(velocity.y >= 0 && !is_on_floor()):
+		$AnimationPlayer.play ("Fall");
+		if(velocity.x < 0):
+			get_node("Sprite2D").flip_h = false;
+		elif(velocity.x > 0):
+			get_node("Sprite2D").flip_h = true;
 	elif(velocity.x < 0):
 		get_node("Sprite2D").flip_h = false
 		$AnimationPlayer.play ("Walking");
