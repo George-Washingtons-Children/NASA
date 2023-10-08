@@ -10,6 +10,9 @@ extends CanvasLayer
 
 @onready var select = [$Hotbar/Panel/oneSelect, $Hotbar/Panel/twoSelect, $Hotbar/Panel/threeSelect]
 
+func _ready():
+	print("first")
+
 func update_health(value):
 	hp.value = value
 
@@ -21,9 +24,11 @@ func update_hunger(value):
 	
 func update_ice(_value):
 	slot2.text = str(SystemManager.ice)
+	print("ice change")
 
 func update_rock(_value):
 	slot1.text = str(SystemManager.rock)
+	print("rock change")
 	
 func update_water(_value):
 	slot3.text = str(SystemManager.water)

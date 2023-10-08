@@ -15,16 +15,21 @@ signal rock
 signal water
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	emit_signal("water", 1)
+	emit_signal("rock", 1)
+	emit_signal("ice", 1)
+	print("Second")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
-			
+	emit_signal("water", 0)
+	emit_signal("rock", 0)
+	emit_signal("ice", 0)
+		
 func _input(event):
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab":
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and get_tree().current_scene.name != "Menu":
 			event = make_input_local(event)
 			tilepos = local_to_map(event.position)
 			print(tilepos)
