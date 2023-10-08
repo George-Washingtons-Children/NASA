@@ -4,6 +4,7 @@ var health = 10
 var invinCount = 5
 var invinTime = 0
 var oxygen = 1000
+var food = 1000
 var malfunctioning = false
 
 var rng = RandomNumberGenerator.new()
@@ -16,6 +17,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 # 9.81 m/s^2 = earth gravity, gravity set to 980
 # 1.4 m/2^2 = titan gravity
 # 980 / 9.81 * 1.4 = 139.857
+
 
 func _physics_process(delta):
 	rng.randomize()
@@ -52,16 +54,21 @@ func _physics_process(delta):
 	if (invinTime > 0):
 		invinTime -= delta
 	
-	if (oxygen >= 0 and get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
-		oxygen -= delta * 2
-		if (oxygen < 0):
-			print("death by axphixiation")
-			
 	
 	if (get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
 		get_node("MalfunctionTimer").set_paused(false)
 	else:
 		get_node("MalfunctionTimer").set_paused(true)
+		
+	if (oxygen >= 0 and get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
+		oxygen -= delta * 2
+		if (oxygen < 0):
+			print("death by axphixiation")
+			
+	if (food >= 0 and get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
+		food -= delta * 2
+		if (food < 0):
+			print("death by starvation")
 	
 
 func _on_pickup_area_entered(area):
