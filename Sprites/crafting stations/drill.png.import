@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dftw3shibnind"
-path="res://.godot/imported/blast furnace.png-1b5363d94f94a1eb765d6df78d71fb99.ctex"
+uid="uid://i5boknrioheb"
+path="res://.godot/imported/drill.png-36e17d3facd30ebdbfd6b85e0ab822cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/crafting stations/blast furnace.png"
-dest_files=["res://.godot/imported/blast furnace.png-1b5363d94f94a1eb765d6df78d71fb99.ctex"]
+source_file="res://Sprites/crafting stations/drill.png"
+dest_files=["res://.godot/imported/drill.png-36e17d3facd30ebdbfd6b85e0ab822cd.ctex"]
 
 [params]
 

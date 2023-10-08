@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dftw3shibnind"
-path="res://.godot/imported/blast furnace.png-1b5363d94f94a1eb765d6df78d71fb99.ctex"
+uid="uid://c1fso01k20rf5"
+path="res://.godot/imported/copper ore.png-31b08e19bb52d1531e258f635226c7f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/crafting stations/blast furnace.png"
-dest_files=["res://.godot/imported/blast furnace.png-1b5363d94f94a1eb765d6df78d71fb99.ctex"]
+source_file="res://Sprites/tiles/copper ore.png"
+dest_files=["res://.godot/imported/copper ore.png-31b08e19bb52d1531e258f635226c7f5.ctex"]
 
 [params]
 

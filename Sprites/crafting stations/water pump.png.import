@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dftw3shibnind"
-path="res://.godot/imported/blast furnace.png-1b5363d94f94a1eb765d6df78d71fb99.ctex"
+uid="uid://gt42cdc4dxbr"
+path="res://.godot/imported/water pump.png-6572ed95087f74e7a69d765446b0a674.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/crafting stations/blast furnace.png"
-dest_files=["res://.godot/imported/blast furnace.png-1b5363d94f94a1eb765d6df78d71fb99.ctex"]
+source_file="res://Sprites/crafting stations/water pump.png"
+dest_files=["res://.godot/imported/water pump.png-6572ed95087f74e7a69d765446b0a674.ctex"]
 
 [params]
 

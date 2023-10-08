@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dftw3shibnind"
-path="res://.godot/imported/blast furnace.png-1b5363d94f94a1eb765d6df78d71fb99.ctex"
+uid="uid://o1fprt8t1t7m"
+path="res://.godot/imported/hab expanders.png-20658065ba8d7cf1f6306dd0cc37f030.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/crafting stations/blast furnace.png"
-dest_files=["res://.godot/imported/blast furnace.png-1b5363d94f94a1eb765d6df78d71fb99.ctex"]
+source_file="res://Sprites/crafting stations/hab expanders.png"
+dest_files=["res://.godot/imported/hab expanders.png-20658065ba8d7cf1f6306dd0cc37f030.ctex"]
 
 [params]
 

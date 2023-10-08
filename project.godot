@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SystemManager="*res://Scripts/System Manager.gd"
 Global="*res://Scripts/System Manager.gd"
+SystemManager="*res://Scripts/System Manager.gd"
 
 [display]
 

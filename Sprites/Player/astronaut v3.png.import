@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dftw3shibnind"
-path="res://.godot/imported/blast furnace.png-1b5363d94f94a1eb765d6df78d71fb99.ctex"
+uid="uid://b5n5guygyx7da"
+path="res://.godot/imported/astronaut v3.png-9679d2f56ad230531226ef3bf26095b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/crafting stations/blast furnace.png"
-dest_files=["res://.godot/imported/blast furnace.png-1b5363d94f94a1eb765d6df78d71fb99.ctex"]
+source_file="res://Sprites/Player/astronaut v3.png"
+dest_files=["res://.godot/imported/astronaut v3.png-9679d2f56ad230531226ef3bf26095b2.ctex"]
 
 [params]
 
