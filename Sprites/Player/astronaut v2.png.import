@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://bktb5ctx4sn4s"
+=======
+uid="uid://cwnpnlfsee4ov"
+>>>>>>> Stashed changes
 path="res://.godot/imported/astronaut v2.png-6d73db985c57c36bd8671fe1dcbcb2d2.ctex"
 metadata={
 "vram_texture": false
