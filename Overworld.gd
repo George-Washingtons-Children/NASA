@@ -14,8 +14,16 @@ func _ready():
 	
 	inHab = false;
 	
+	
+	
+	
+	
+	
+	
+	
+	
 func _process(delta):
-2	checkEnter()
+	checkEnter()
 
 
 func _on_area_2d_body_entered(body):
