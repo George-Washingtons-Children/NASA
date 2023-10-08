@@ -1,5 +1,7 @@
 extends Node2D
 
+var inHab;
+
 func _ready():
 	$Player.health_changed.connect($"/root/SystemManager".update_health)
 	$Player.oxygen_changed.connect($"/root/SystemManager".update_oxygen)
@@ -19,13 +21,32 @@ func _ready():
 	$"/root/SystemManager".hungerSig.connect($UI.update_hunger)
 	
 	$Player.selectMatChange.connect($UI.update_select)
+	
+	inHab = false;
 
+func _process(delta):
+	checkEnter()
 
 func _on_area_2d_body_entered(body):
+	if(body.get_name() == "Player"):
+		print("entering hab area")
+		inHab = true;
+		get_node("HabEnter").visible = true;
+
+func _on_area_2d_body_exited(body):
 	if (body.get_name() == "Player"):
-		pass
+		print("exiting hab area")
+		inHab = false;
+		get_node("HabEnter").visible = false;
 
 func _on_hab_area_body_entered(body):
-	if (body.get_name() == "Player"):
-		#MAKE A POP UP TO TELL PLAYER TO PRESS 'E'
-		pass
+	if(body.get_name() == "Player"):
+		print("entering hab area")
+		inHab = true;
+		get_node("HabEnter").visible = true;
+		
+func checkEnter():
+	if(inHab && Input.is_action_just_pressed("Interaction")):
+		print("entering hab scene")
+		get_node("HabEnter").visible = false;
+		get_tree().change_scene_to_file("res://Scenes/hab.tscn")

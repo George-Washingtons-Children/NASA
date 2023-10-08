@@ -63,10 +63,11 @@ func update_water(value):
 func _ready():
 	pass
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	emit_signal("healthSig", health)
+	emit_signal("oxygenSig", oxygen)
+	emit_signal("hungerSig", food)
 
 func _on_pickup_body_entered(body):
 	if (body.get_name() == "Player"):
