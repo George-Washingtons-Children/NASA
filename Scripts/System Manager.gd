@@ -47,6 +47,17 @@ func update_malfunction(value):
 		rateMultiplier = 1
 	print(malfunctioning)
 # Called when the node enters the scene tree for the first time.
+
+func update_ice(value):
+	ice += value
+	
+func update_rock(value):
+	rock += value
+	print(rock)
+	
+func update_water(value):
+	water += value
+	
 func _ready():
 	pass
 

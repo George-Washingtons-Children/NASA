@@ -6,6 +6,8 @@ func _ready():
 	$Player.hunger_changed.connect($"/root/SystemManager".update_hunger)
 	$Player.malfunction.connect($"/root/SystemManager".update_malfunction)
 	
+	$"Level Design".rock.connect($"/root/SystemManager".update_rock)
+	
 	$"/root/SystemManager".healthSig.connect($UI.update_health)
 	$"/root/SystemManager".oxygenSig.connect($UI.update_oxygen)
 	$"/root/SystemManager".hungerSig.connect($UI.update_hunger)
