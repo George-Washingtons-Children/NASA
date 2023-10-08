@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=14 format=3 uid="uid://dvh2vu3p8dvt4"]
 
-[ext_resource type="Texture2D" uid="uid://4w84of3t7y6a" path="res://Sprites/tiles/hab wall.png" id="1_btbmu"]
+[ext_resource type="Texture2D" uid="uid://xcrbas3gr4gq" path="res://Sprites/tiles/hab wall.png" id="1_btbmu"]
 [ext_resource type="Texture2D" uid="uid://7f1r4o07j7gg" path="res://Sprites/tiles/water block.png" id="2_i008j"]
 [ext_resource type="Texture2D" uid="uid://dmit73x7qqvsq" path="res://Sprites/tiles/rock.png" id="3_fm3gq"]
 [ext_resource type="Texture2D" uid="uid://kdma515lhujp" path="res://Sprites/tiles/iceblock.png" id="4_ua8bi"]

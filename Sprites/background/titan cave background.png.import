@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rmvbx0vubgt"
-path="res://.godot/imported/astronaut v3.png-9679d2f56ad230531226ef3bf26095b2.ctex"
+uid="uid://drc21023nhb1v"
+path="res://.godot/imported/titan cave background.png-38de5fdc45d13b285218fa1b05d52ffb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/astronaut v3.png"
-dest_files=["res://.godot/imported/astronaut v3.png-9679d2f56ad230531226ef3bf26095b2.ctex"]
+source_file="res://Sprites/background/titan cave background.png"
+dest_files=["res://.godot/imported/titan cave background.png-38de5fdc45d13b285218fa1b05d52ffb.ctex"]
 
 [params]
 
