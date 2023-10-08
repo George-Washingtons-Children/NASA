@@ -1,7 +1,10 @@
 extends Node2D
 
-var inHab;
+var outHab = false;
+var inHydro = false;
+var food = preload("res://Prefabs/pickup.tscn")
 
+# Called when the node enters the scene tree for the first time.
 func _ready():
 	$Player.health_changed.connect($"/root/SystemManager".update_health)
 	$Player.oxygen_changed.connect($"/root/SystemManager".update_oxygen)
@@ -22,32 +25,53 @@ func _ready():
 	$"/root/SystemManager".hungerSig.connect($UI.update_hunger)
 	
 	$Player.selectMatChange.connect($UI.update_select)
-	
-	inHab = false;
 
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	checkEnter()
+	checkExit()
+	checkHydro()
 
-func _on_area_2d_body_entered(body):
-	if(body.get_name() == "Player"):
-		print("entering hab area")
-		inHab = true;
-		get_node("HabEnter").visible = true;
-
-func _on_area_2d_body_exited(body):
-	if (body.get_name() == "Player"):
-		print("exiting hab area")
-		inHab = false;
-		get_node("HabEnter").visible = false;
 
 func _on_hab_area_body_entered(body):
 	if(body.get_name() == "Player"):
 		print("entering hab area")
-		inHab = true;
+		outHab = true;
 		get_node("HabEnter").visible = true;
-		
-func checkEnter():
-	if(inHab && Input.is_action_just_pressed("Interaction")):
+
+
+func _on_hab_area_body_exited(body):
+	if (body.get_name() == "Player"):
+		print("exiting hab area")
+		outHab = false;
+		get_node("HabEnter").visible = false;
+
+func checkExit():
+	if(outHab && Input.is_action_just_pressed("Interaction")):
 		print("entering hab scene")
 		get_node("HabEnter").visible = false;
-		get_tree().change_scene_to_file("res://Scenes/hab.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Overworld.tscn")
+
+func _on_hydroponics_body_entered(body):
+	if(body.get_name() == "Player"):
+		print("entering hydro area")
+		inHydro = true;
+		get_node("Hydro").visible = true;
+
+
+func _on_hydroponics_body_exited(body):
+	if (body.get_name() == "Player"):
+		print("exiting hydro area")
+		inHydro = false;
+		get_node("Hydro").visible = false;
+
+func checkHydro():
+	if(inHydro && Input.is_action_just_pressed("Interaction")):
+		print("making food")
+		get_node("Hydro").visible = false;
+		makefood()
+		
+func makefood():
+	var instance = food.instantiate()
+	instance.position = Vector2(450,875)
+	add_child(instance);

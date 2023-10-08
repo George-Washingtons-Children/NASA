@@ -10,6 +10,11 @@ extends CanvasLayer
 
 @onready var select = [$Hotbar/Panel/oneSelect, $Hotbar/Panel/twoSelect, $Hotbar/Panel/threeSelect]
 
+@onready var malfunction = $malText
+
+func _ready():
+	print("first")
+
 func update_health(value):
 	hp.value = value
 
@@ -35,3 +40,9 @@ func update_select(value):
 			select[i-1].visible = true
 		else:
 			select[i-1].visible = false
+			
+func update_mal(value):
+	if (value == true):
+		malfunction.visible = true
+	else:
+		malfunction.visible = false

@@ -94,7 +94,9 @@ func _physics_process(delta):
 		
 	if (get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
 		emit_signal("oxygen_changed", oxygenRate * delta)
-			
+	elif (get_tree().current_scene.name == "Hab"):
+		emit_signal("oxygen_changed", oxygenRate * delta * -1)
+		
 	if (get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
 		emit_signal("hunger_changed", foodRate * delta)
 			

@@ -55,7 +55,6 @@ func update_ice(value):
 	
 func update_rock(value):
 	rock += value
-	print(rock)
 	
 func update_water(value):
 	water += value
@@ -63,11 +62,20 @@ func update_water(value):
 func _ready():
 	pass
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	emit_signal("healthSig", health)
+	emit_signal("oxygenSig", oxygen)
+	emit_signal("hungerSig", food)
 
 func _on_pickup_body_entered(body):
 	if (body.get_name() == "Player"):
-		pass
+		if(food < 1000 && food > 0):
+			food += 333;
+			emit_signal("hungerSig", food)
+			
+func checkInHab():
+	if(get_tree().current_scene.name == "Hab"):
+		if(oxygen < 1000):
+			oxygen += 1.5;
+			emit_signal("oxygenSig", food)
