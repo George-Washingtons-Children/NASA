@@ -3,14 +3,15 @@ extends Area2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
 	pass
 
 func _on_hab_area_body_entered(body):
 	if (body.get_name() == "Player"):
-		#MAKE A POP UP TO TELL PLAYER TO PRESS 'E'
+		print("entering hab area")
+		get_node("HabEnter").visible = true;
+		
+func _on_hab_area_body_exit(body):
+	if (body.get_name() == "Player"):
+		print("leaving hab area")
+		get_node("HabEnter").visible = false;
 
