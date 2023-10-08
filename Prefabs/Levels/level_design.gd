@@ -23,7 +23,7 @@ func _input(event):
 				get_node("Timer").start(holdCount)
 				#print(get_cell_atlas_coords(0, tilepos))
 				#set_cell(0, tilepos, 1, Vector2i(0,0))
-			elif (get_cell_source_id(0, tilepos) == 1):
+			elif (get_cell_source_id(0, tilepos) == -1):
 				#print(get_cell_atlas_coords(0, tilepos))
 				set_cell(0, tilepos, 2, Vector2i(0,0))
 		if event.pressed == false:
@@ -32,4 +32,4 @@ func _input(event):
 
 func _on_timer_timeout():
 	#print(get_cell_atlas_coords(0, tilepos))
-	set_cell(0, tilepos, 1, Vector2i(0,0))
+	set_cell(0, tilepos, -1, Vector2i(0,0))
