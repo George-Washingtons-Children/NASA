@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://vho5kbdut2d5"]
 
 [ext_resource type="TileSet" uid="uid://xckponfleb5" path="res://Sprites/Tilesets/test_set.tres" id="1_sxtlh"]
-[ext_resource type="PackedScene" uid="uid://jbrvvua7jm0x" path="res://Prefabs/player.tscn" id="2_0acg8"]
+[ext_resource type="PackedScene" uid="uid://ccxtkd60ikn8e" path="res://Prefabs/player.tscn" id="2_0acg8"]
 
 [node name="Hab" type="Node2D"]
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://jbrvvua7jm0x"]
+[gd_scene load_steps=10 format=3 uid="uid://ccxtkd60ikn8e"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_xjkh7"]
 [ext_resource type="Texture2D" uid="uid://2ja1lwsrtdsx" path="res://Sprites/Player/astronaut.png" id="2_lnfo0"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s2d6j"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kct4l"]
+size = Vector2(32, 32)
 
 [sub_resource type="Animation" id="Animation_im0v8"]
 resource_name = "Fall"
@@ -101,8 +102,7 @@ hframes = 8
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-shape = SubResource("CapsuleShape2D_s2d6j")
+shape = SubResource("RectangleShape2D_kct4l")
 
 [node name="MalfunctionTimer" type="Timer" parent="."]
 wait_time = 5.0
