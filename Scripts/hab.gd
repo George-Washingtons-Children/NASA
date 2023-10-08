@@ -1,6 +1,7 @@
 extends Node2D
 
 var outHab = false;
+signal leaveHab
 var inHydro = false;
 var food = preload("res://Prefabs/pickup.tscn")
 

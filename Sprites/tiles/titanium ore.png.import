@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rmvbx0vubgt"
-path="res://.godot/imported/astronaut v3.png-9679d2f56ad230531226ef3bf26095b2.ctex"
+uid="uid://csw3qpnvc7p2u"
+path="res://.godot/imported/titanium ore.png-31f33e137b8769c57abe65cae949722f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/astronaut v3.png"
-dest_files=["res://.godot/imported/astronaut v3.png-9679d2f56ad230531226ef3bf26095b2.ctex"]
+source_file="res://Sprites/tiles/titanium ore.png"
+dest_files=["res://.godot/imported/titanium ore.png-31f33e137b8769c57abe65cae949722f.ctex"]
 
 [params]
 

@@ -1,13 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://dr6848j1p8ifc"]
+[gd_scene load_steps=14 format=3 uid="uid://dr6848j1p8ifc"]
 
 [ext_resource type="Script" path="res://Scripts/ui.gd" id="1_kcmhm"]
 [ext_resource type="Script" path="res://Scripts/HealthBar.gd" id="2_hh08r"]
+[ext_resource type="Texture2D" uid="uid://ba28idxbou3uu" path="res://Sprites/background/titan land.png" id="3_2np8e"]
 [ext_resource type="Texture2D" uid="uid://cq0kdl5e8ut8r" path="res://Sprites/ui/heart.png" id="3_5t804"]
-[ext_resource type="Texture2D" uid="uid://cfcj2p436tste" path="res://Sprites/food/hotdog.png" id="4_e0h71"]
+[ext_resource type="Texture2D" uid="uid://wcb2nlmdj24q" path="res://Sprites/food/hotdog.png" id="4_e0h71"]
 [ext_resource type="Texture2D" uid="uid://c0rgb526b0agv" path="res://Sprites/ui/bubble.png" id="4_f8e3v"]
 [ext_resource type="Texture2D" uid="uid://dmit73x7qqvsq" path="res://Sprites/tiles/rock.png" id="5_6cjh1"]
 [ext_resource type="Texture2D" uid="uid://kdma515lhujp" path="res://Sprites/tiles/iceblock.png" id="6_gk0gw"]
-[ext_resource type="Texture2D" uid="uid://7f1r4o07j7gg" path="res://Sprites/tiles/water block.png" id="7_omhss"]
+[ext_resource type="Texture2D" uid="uid://6rwnla453tsb" path="res://Sprites/tiles/iron ore.png" id="8_qmvh5"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1yd3d"]
 
@@ -20,6 +21,16 @@ bg_color = Color(0.713726, 0.65098, 0.372549, 1)
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_kcmhm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+show_behind_parent = true
+light_mask = 512
+visibility_layer = 524800
+texture_filter = 1
+position = Vector2(575, 322)
+scale = Vector2(0.900781, 0.888889)
+texture = ExtResource("3_2np8e")
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 material = SubResource("CanvasItemMaterial_1yd3d")
@@ -158,7 +169,7 @@ text = "0
 [node name="Slot3" type="Sprite2D" parent="Hotbar/Panel"]
 position = Vector2(352, 48)
 scale = Vector2(4, 4)
-texture = ExtResource("7_omhss")
+texture = ExtResource("8_qmvh5")
 
 [node name="Slot3Text" type="Label" parent="Hotbar/Panel/Slot3"]
 material = SubResource("CanvasItemMaterial_1vgen")
@@ -180,3 +191,12 @@ offset_right = 244.0
 offset_bottom = 154.0
 theme_override_font_sizes/font_size = 35
 text = "Suit Currently Malfunctioning"
+
+[node name="WaterBar" type="ProgressBar" parent="."]
+offset_left = 48.0
+offset_top = 328.0
+offset_right = 80.0
+offset_bottom = 627.0
+fill_mode = 3
+script = ExtResource("2_hh08r")
+color = "#186ff2"
