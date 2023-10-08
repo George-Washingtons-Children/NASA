@@ -9,9 +9,42 @@ script = ExtResource("1_pxjpd")
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 material = SubResource("CanvasItemMaterial_1yd3d")
-offset_left = 759.0
-offset_top = 24.0
-offset_right = 1120.0
-offset_bottom = 86.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -376.0
+offset_top = 16.0
+offset_right = -32.0
+offset_bottom = 72.0
+grow_horizontal = 0
 max_value = 10.0
 value = 10.0
+show_percentage = false
+
+[node name="HungerBar" type="ProgressBar" parent="."]
+material = SubResource("CanvasItemMaterial_1yd3d")
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -360.0
+offset_top = 88.0
+offset_right = -31.0
+offset_bottom = 120.0
+grow_horizontal = 0
+max_value = 1000.0
+value = 1000.0
+show_percentage = false
+
+[node name="OxygenBar" type="ProgressBar" parent="."]
+material = SubResource("CanvasItemMaterial_1yd3d")
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -328.0
+offset_top = 136.0
+offset_right = -31.0
+offset_bottom = 152.0
+grow_horizontal = 0
+max_value = 1000.0
+value = 1000.0
+show_percentage = false
