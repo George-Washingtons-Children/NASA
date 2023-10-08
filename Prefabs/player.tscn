@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://ccxtkd60ikn8e"]
+[gd_scene load_steps=10 format=3 uid="uid://jbrvvua7jm0x"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_xjkh7"]
-[ext_resource type="Texture2D" uid="uid://2ja1lwsrtdsx" path="res://Sprites/Player/astronaut.png" id="2_lnfo0"]
+[ext_resource type="Texture2D" uid="uid://diok4e1cduqn1" path="res://Sprites/Player/astronaut v2.png" id="2_n8alp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kct4l"]
-size = Vector2(32, 32)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s2d6j"]
 
 [sub_resource type="Animation" id="Animation_im0v8"]
 resource_name = "Fall"
@@ -94,15 +93,17 @@ _data = {
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_xjkh7")
+SPEED = 175.0
 JUMP_VELOCITY = -270.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_lnfo0")
+texture = ExtResource("2_n8alp")
 hframes = 8
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_kct4l")
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_s2d6j")
 
 [node name="MalfunctionTimer" type="Timer" parent="."]
 wait_time = 5.0

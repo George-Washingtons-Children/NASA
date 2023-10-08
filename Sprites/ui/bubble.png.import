@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4ykmbrdsa7f6"
-path="res://.godot/imported/astronaut jump.png-4d21ef154276f14076748f60c3c6c948.ctex"
+uid="uid://c0rgb526b0agv"
+path="res://.godot/imported/bubble.png-cdc98a8ea707cd5bbbb296d1ec0b35b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/astronaut jump.png"
-dest_files=["res://.godot/imported/astronaut jump.png-4d21ef154276f14076748f60c3c6c948.ctex"]
+source_file="res://Sprites/ui/bubble.png"
+dest_files=["res://.godot/imported/bubble.png-cdc98a8ea707cd5bbbb296d1ec0b35b7.ctex"]
 
 [params]
 

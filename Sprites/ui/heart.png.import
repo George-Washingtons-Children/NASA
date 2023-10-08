@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diok4e1cduqn1"
-path="res://.godot/imported/astronaut v2.png-6d73db985c57c36bd8671fe1dcbcb2d2.ctex"
+uid="uid://cq0kdl5e8ut8r"
+path="res://.godot/imported/heart.png-99261876954b0beb9be6ed3f7a6f4993.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/astronaut v2.png"
-dest_files=["res://.godot/imported/astronaut v2.png-6d73db985c57c36bd8671fe1dcbcb2d2.ctex"]
+source_file="res://Sprites/ui/heart.png"
+dest_files=["res://.godot/imported/heart.png-99261876954b0beb9be6ed3f7a6f4993.ctex"]
 
 [params]
 

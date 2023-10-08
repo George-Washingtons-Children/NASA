@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2ja1lwsrtdsx"
-path="res://.godot/imported/astronaut.png-bffce4bc945f430a54ed96f5f6248b0c.ctex"
+uid="uid://6rwnla453tsb"
+path="res://.godot/imported/iron ore.png-3e441e405ef4825cc27b52ba0d2d9061.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/astronaut.png"
-dest_files=["res://.godot/imported/astronaut.png-bffce4bc945f430a54ed96f5f6248b0c.ctex"]
+source_file="res://Sprites/tiles/iron ore.png"
+dest_files=["res://.godot/imported/iron ore.png-3e441e405ef4825cc27b52ba0d2d9061.ctex"]
 
 [params]
 
