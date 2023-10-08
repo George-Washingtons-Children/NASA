@@ -70,4 +70,12 @@ func _process(delta):
 
 func _on_pickup_body_entered(body):
 	if (body.get_name() == "Player"):
-		pass
+		if(food < 1000 && food > 0):
+			food += 333;
+			emit_signal("hungerSig", food)
+			
+func checkInHab():
+	if(get_tree().current_scene.name == "Hab"):
+		if(oxygen < 1000):
+			oxygen += 1.5;
+			emit_signal("oxygenSig", food)
