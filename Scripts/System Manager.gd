@@ -3,6 +3,7 @@ extends Node
 var ice = 0
 var rock = 0
 var water = 0
+var iron = 0
 
 var health = 10
 var oxygen = 1000
@@ -58,6 +59,9 @@ func update_rock(value):
 	
 func update_water(value):
 	water += value
+
+func update_iron(value):
+	iron += value
 	
 func _ready():
 	pass

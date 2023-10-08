@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c0rgb526b0agv" path="res://Sprites/ui/bubble.png" id="4_f8e3v"]
 [ext_resource type="Texture2D" uid="uid://dmit73x7qqvsq" path="res://Sprites/tiles/rock.png" id="5_6cjh1"]
 [ext_resource type="Texture2D" uid="uid://kdma515lhujp" path="res://Sprites/tiles/iceblock.png" id="6_gk0gw"]
-[ext_resource type="Texture2D" uid="uid://7f1r4o07j7gg" path="res://Sprites/tiles/water block.png" id="7_omhss"]
+[ext_resource type="Texture2D" uid="uid://6rwnla453tsb" path="res://Sprites/tiles/iron ore.png" id="8_qmvh5"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1yd3d"]
 
@@ -169,7 +169,7 @@ text = "0
 [node name="Slot3" type="Sprite2D" parent="Hotbar/Panel"]
 position = Vector2(352, 48)
 scale = Vector2(4, 4)
-texture = ExtResource("7_omhss")
+texture = ExtResource("8_qmvh5")
 
 [node name="Slot3Text" type="Label" parent="Hotbar/Panel/Slot3"]
 material = SubResource("CanvasItemMaterial_1vgen")
@@ -191,3 +191,12 @@ offset_right = 244.0
 offset_bottom = 154.0
 theme_override_font_sizes/font_size = 35
 text = "Suit Currently Malfunctioning"
+
+[node name="WaterBar" type="ProgressBar" parent="."]
+offset_left = 48.0
+offset_top = 328.0
+offset_right = 80.0
+offset_bottom = 627.0
+fill_mode = 3
+script = ExtResource("2_hh08r")
+color = "#186ff2"
