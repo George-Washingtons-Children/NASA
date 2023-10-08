@@ -13,6 +13,10 @@ signal oxygen_changed
 signal hunger_changed
 signal malfunction
 
+var selectMat
+
+signal selectMatChange
+
 var rng = RandomNumberGenerator.new()
 
 @export var SPEED = 300.0
@@ -95,6 +99,18 @@ func _physics_process(delta):
 	#after crafting a watertank:
 	emit_signal("watertank", true)
 	
+	if (Input.is_key_pressed(KEY_1)):
+		selectMat = 1
+		SystemManager.select = selectMat
+		emit_signal("selectMatChange", selectMat)
+	elif (Input.is_key_pressed(KEY_2)):
+		selectMat = 2
+		SystemManager.select = selectMat
+		emit_signal("selectMatChange", selectMat)
+	elif (Input.is_key_pressed(KEY_3)):
+		selectMat = 3
+		SystemManager.select = selectMat
+		emit_signal("selectMatChange", selectMat)
 
 func _on_pickup_area_entered(area):
 	print("pickup")
