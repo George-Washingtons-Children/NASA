@@ -42,7 +42,7 @@ position = Vector2(688, 465.5)
 shape = SubResource("RectangleShape2D_4e5bf")
 
 [node name="pickup" parent="." instance=ExtResource("7_v6ekr")]
-position = Vector2(260, 560)
+position = Vector2(244, 562)
 
 [node name="HabEnter" type="CanvasLayer" parent="."]
 visible = false
