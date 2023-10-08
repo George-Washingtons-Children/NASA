@@ -9,6 +9,7 @@ var malfunctioning = false
 
 signal health_changed
 signal oxygen_changed
+signal hunger_changed
 
 var rng = RandomNumberGenerator.new()
 
@@ -65,11 +66,13 @@ func _physics_process(delta):
 		
 	if (oxygen >= 0 and get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
 		oxygen -= delta * 2
+		emit_signal("oxygen_changed", oxygen)
 		if (oxygen < 0):
 			print("death by axphixiation")
 			
 	if (food >= 0 and get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
-		food -= delta * 2
+		food -= delta * 0.5
+		emit_signal("hunger_changed", food)
 		if (food < 0):
 			print("death by starvation")
 	
