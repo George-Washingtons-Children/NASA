@@ -1,11 +1,12 @@
-[gd_resource type="TileSet" load_steps=14 format=3 uid="uid://dvh2vu3p8dvt4"]
+[gd_resource type="TileSet" load_steps=16 format=3 uid="uid://dvh2vu3p8dvt4"]
 
 [ext_resource type="Texture2D" uid="uid://xcrbas3gr4gq" path="res://Sprites/tiles/hab wall.png" id="1_btbmu"]
 [ext_resource type="Texture2D" uid="uid://7f1r4o07j7gg" path="res://Sprites/tiles/water block.png" id="2_i008j"]
-[ext_resource type="Texture2D" uid="uid://brx2oqh5pqret" path="res://Sprites/tiles/rock.png" id="3_fm3gq"]
-[ext_resource type="Texture2D" uid="uid://d4cif3qcj3wlm" path="res://Sprites/tiles/iceblock.png" id="4_ua8bi"]
+[ext_resource type="Texture2D" uid="uid://dmit73x7qqvsq" path="res://Sprites/tiles/rock.png" id="3_fm3gq"]
+[ext_resource type="Texture2D" uid="uid://kdma515lhujp" path="res://Sprites/tiles/iceblock.png" id="4_ua8bi"]
 [ext_resource type="Texture2D" uid="uid://6rwnla453tsb" path="res://Sprites/tiles/iron ore.png" id="5_1xqhs"]
 [ext_resource type="Texture2D" uid="uid://h4ghd7f0cfmm" path="res://Sprites/tiles/hab floor.png" id="5_i1y1s"]
+[ext_resource type="Texture2D" uid="uid://dpbj43m80txos" path="res://Sprites/tiles/grey rock.png" id="5_u26gw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sdusm"]
 texture = ExtResource("1_btbmu")
@@ -33,6 +34,14 @@ texture = ExtResource("5_i1y1s")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wd5n"]
+resource_name = "rock_grey"
+texture = ExtResource("5_u26gw")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_akavv"]
 resource_name = "Iron ore"
@@ -65,3 +74,4 @@ sources/7 = SubResource("TileSetAtlasSource_djt6o")
 sources/8 = SubResource("TileSetAtlasSource_7h68u")
 sources/3 = SubResource("TileSetAtlasSource_mwn7u")
 sources/6 = SubResource("TileSetAtlasSource_akavv")
+sources/4 = SubResource("TileSetAtlasSource_4wd5n")
