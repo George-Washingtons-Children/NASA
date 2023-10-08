@@ -11,7 +11,7 @@ var food = 1000
 var malfunctioning = false
 var rateMultiplier = 1
 
-var waterpack = false
+var waterpack = true
 
 var select = 1
 
