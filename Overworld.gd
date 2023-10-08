@@ -17,6 +17,7 @@ func _ready():
 	
 	$"Level Design".rock.connect($UI.update_rock)
 	$"Level Design".water.connect($UI.update_water)
+	$"Level Design".ice.connect($UI.update_ice)
 	$"Level Design".iron.connect($UI.update_iron)
 	
 	$"/root/SystemManager".healthSig.connect($UI.update_health)
