@@ -40,6 +40,15 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
+	if(velocity.x == 0):
+		$AnimationPlayer.play("Idle");
+	elif(velocity.x < 0):
+		get_node("Sprite2D").flip_h = false
+		$AnimationPlayer.play ("Walking");
+	elif(velocity.x > 0):
+		get_node("Sprite2D").flip_h = true
+		$AnimationPlayer.play ("Walking");
+	
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		if collision.get_collider().is_in_group("enemy") and invinTime <= 0:

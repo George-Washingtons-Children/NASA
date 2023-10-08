@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dr6848j1p8ifc"]
 
-[ext_resource type="Script" path="res://Prefabs/ui.gd" id="1_pxjpd"]
+[ext_resource type="Script" path="res://Scripts/ui.gd" id="1_pxjpd"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1yd3d"]
 
