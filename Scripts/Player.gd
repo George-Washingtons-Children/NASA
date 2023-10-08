@@ -28,8 +28,10 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 # 1.4 m/2^2 = titan gravity
 # 980 / 9.81 * 1.4 = 139.857
 
-func _physics_process(delta):
+func _ready():
 	rng.randomize()
+
+func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
