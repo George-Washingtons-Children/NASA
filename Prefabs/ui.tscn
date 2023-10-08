@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr6848j1p8ifc"]
+
+[ext_resource type="Script" path="res://Prefabs/ui.gd" id="1_pxjpd"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1yd3d"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_pxjpd")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+material = SubResource("CanvasItemMaterial_1yd3d")
+offset_left = 759.0
+offset_top = 24.0
+offset_right = 1120.0
+offset_bottom = 86.0
+max_value = 10.0
+value = 10.0

@@ -17,7 +17,12 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+SystemManager="*res://Scripts/System Manager.gd"
 Global="*res://Scripts/System Manager.gd"
+
+[display]
+
+window/size/mode=2
 
 [physics]
 
