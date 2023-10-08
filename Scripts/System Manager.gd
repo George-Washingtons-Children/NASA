@@ -12,6 +12,8 @@ var rateMultiplier = 1
 
 var waterpack = false
 
+var select = 1
+
 signal healthSig
 signal oxygenSig
 signal hungerSig
@@ -47,6 +49,17 @@ func update_malfunction(value):
 		rateMultiplier = 1
 	print(malfunctioning)
 # Called when the node enters the scene tree for the first time.
+
+func update_ice(value):
+	ice += value
+	
+func update_rock(value):
+	rock += value
+	print(rock)
+	
+func update_water(value):
+	water += value
+	
 func _ready():
 	pass
 
@@ -54,7 +67,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-	
 
 func _on_pickup_body_entered(body):
 	if (body.get_name() == "Player"):
