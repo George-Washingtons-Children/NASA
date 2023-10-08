@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cql86sxlxupjb"
-path="res://.godot/imported/astr.png-50080884b7374ee836a27f164167a998.ctex"
+uid="uid://7f1r4o07j7gg"
+path="res://.godot/imported/water block.png-e8efa7d257a509a68f807e47b24c7d6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/astr.png"
-dest_files=["res://.godot/imported/astr.png-50080884b7374ee836a27f164167a998.ctex"]
+source_file="res://Sprites/tiles/water block.png"
+dest_files=["res://.godot/imported/water block.png-e8efa7d257a509a68f807e47b24c7d6a.ctex"]
 
 [params]
 
