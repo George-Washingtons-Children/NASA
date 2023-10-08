@@ -12,3 +12,4 @@ func update_oxygen(value):
 
 func update_hunger(value):
 	hun.value = value
+
