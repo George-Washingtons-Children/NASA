@@ -1,6 +1,8 @@
 extends Node2D
 
 var outHab = false;
+var inHydro = false;
+var food = preload("res://Prefabs/pickup.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,6 +30,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	checkExit()
+	checkHydro()
 
 
 func _on_hab_area_body_entered(body):
@@ -48,3 +51,27 @@ func checkExit():
 		print("entering hab scene")
 		get_node("HabEnter").visible = false;
 		get_tree().change_scene_to_file("res://Scenes/Overworld.tscn")
+
+func _on_hydroponics_body_entered(body):
+	if(body.get_name() == "Player"):
+		print("entering hydro area")
+		inHydro = true;
+		get_node("Hydro").visible = true;
+
+
+func _on_hydroponics_body_exited(body):
+	if (body.get_name() == "Player"):
+		print("exiting hydro area")
+		inHydro = false;
+		get_node("Hydro").visible = false;
+
+func checkHydro():
+	if(inHydro && Input.is_action_just_pressed("Interaction")):
+		print("making food")
+		get_node("Hydro").visible = false;
+		makefood()
+		
+func makefood():
+	var instance = food.instantiate()
+	instance.position = Vector2(450,875)
+	add_child(instance);
