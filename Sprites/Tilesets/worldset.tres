@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=14 format=3 uid="uid://dvh2vu3p8dvt4"]
+[gd_resource type="TileSet" load_steps=14 format=3 uid="uid://c7gghqhod4myv"]
 
 [ext_resource type="Texture2D" uid="uid://4w84of3t7y6a" path="res://Sprites/tiles/hab wall.png" id="1_btbmu"]
 [ext_resource type="Texture2D" uid="uid://7f1r4o07j7gg" path="res://Sprites/tiles/water block.png" id="2_i008j"]
