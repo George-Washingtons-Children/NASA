@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://jbrvvua7jm0x"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_xjkh7"]
-[ext_resource type="Texture2D" uid="uid://cwnpnlfsee4ov" path="res://Sprites/Player/astronaut v2.png" id="2_n8alp"]
+[ext_resource type="Texture2D" uid="uid://diok4e1cduqn1" path="res://Sprites/Player/astronaut v2.png" id="2_n8alp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s2d6j"]
 

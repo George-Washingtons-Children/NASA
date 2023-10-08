@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://c7gghqhod4myv"]
+[gd_resource type="TileSet" load_steps=12 format=3 uid="uid://c7gghqhod4myv"]
 
 [ext_resource type="Texture2D" uid="uid://xcrbas3gr4gq" path="res://Sprites/tiles/hab wall.png" id="1_btbmu"]
 [ext_resource type="Texture2D" uid="uid://7f1r4o07j7gg" path="res://Sprites/tiles/water block.png" id="2_i008j"]
@@ -11,6 +11,7 @@ texture = ExtResource("1_btbmu")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4q34"]
 texture = ExtResource("2_i008j")
@@ -24,6 +25,13 @@ texture = ExtResource("3_fm3gq")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mwn7u"]
+resource_name = "backwall"
+texture = ExtResource("5_i1y1s")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_djt6o"]
 texture = ExtResource("4_ua8bi")
@@ -46,3 +54,4 @@ sources/1 = SubResource("TileSetAtlasSource_b4q34")
 sources/2 = SubResource("TileSetAtlasSource_cnilm")
 sources/7 = SubResource("TileSetAtlasSource_djt6o")
 sources/8 = SubResource("TileSetAtlasSource_7h68u")
+sources/3 = SubResource("TileSetAtlasSource_mwn7u")
