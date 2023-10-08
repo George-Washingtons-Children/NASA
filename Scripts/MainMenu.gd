@@ -1,7 +1,8 @@
 extends Node2D
 
 
-
+func _ready():
+	get_window().mode = Window.MODE_MAXIMIZED
 
 
 func _on_quit_button_pressed():
