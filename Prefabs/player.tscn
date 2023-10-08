@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bligaivhblv8d" path="res://Sprites/temp player.png" id="2_qh4wd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kct4l"]
-size = Vector2(26, 29)
+size = Vector2(32, 32)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_xjkh7")
@@ -14,7 +14,6 @@ JUMP_VELOCITY = -270.0
 texture = ExtResource("2_qh4wd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_kct4l")
 
 [node name="MalfunctionTimer" type="Timer" parent="."]
