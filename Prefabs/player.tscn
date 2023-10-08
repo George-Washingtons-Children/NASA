@@ -20,7 +20,4 @@ shape = SubResource("RectangleShape2D_kct4l")
 wait_time = 5.0
 autostart = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.5, 1.5)
-
 [connection signal="timeout" from="MalfunctionTimer" to="." method="_on_malfunction_timer_timeout"]

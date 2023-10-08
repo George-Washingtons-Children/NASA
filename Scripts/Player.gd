@@ -7,6 +7,9 @@ var oxygen = 1000
 var food = 1000
 var malfunctioning = false
 
+signal health_changed
+signal oxygen_changed
+
 var rng = RandomNumberGenerator.new()
 
 @export var SPEED = 300.0
@@ -17,7 +20,6 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 # 9.81 m/s^2 = earth gravity, gravity set to 980
 # 1.4 m/2^2 = titan gravity
 # 980 / 9.81 * 1.4 = 139.857
-
 
 func _physics_process(delta):
 	rng.randomize()
@@ -45,6 +47,7 @@ func _physics_process(delta):
 			velocity.x = move_toward(-1 * velocity.x, 0, -1 * SPEED)
 			invinTime = invinCount
 			health -= 1
+			emit_signal("health_changed", health)
 			print(health)
 		if collision.get_collider().is_in_group("pickup"):
 			print("pickup")
@@ -81,3 +84,4 @@ func _on_malfunction_timer_timeout():
 		malfunctioning = true
 	print(mal)
 	print(malfunctioning)
+

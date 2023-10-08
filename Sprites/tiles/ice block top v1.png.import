@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2ja1lwsrtdsx"
-path="res://.godot/imported/astronaut.png-bffce4bc945f430a54ed96f5f6248b0c.ctex"
+uid="uid://ds75roljtgaio"
+path="res://.godot/imported/ice block top v1.png-6768cc040a8e6ef8ac4d68766b03716f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/astronaut.png"
-dest_files=["res://.godot/imported/astronaut.png-bffce4bc945f430a54ed96f5f6248b0c.ctex"]
+source_file="res://Sprites/tiles/ice block top v1.png"
+dest_files=["res://.godot/imported/ice block top v1.png-6768cc040a8e6ef8ac4d68766b03716f.ctex"]
 
 [params]
 
