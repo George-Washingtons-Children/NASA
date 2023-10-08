@@ -94,6 +94,7 @@ _data = {
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_xjkh7")
+SPEED = 225.0
 JUMP_VELOCITY = -270.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
