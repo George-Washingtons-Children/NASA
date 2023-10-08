@@ -1,18 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://4rtf3xgf03ai"]
 
 [ext_resource type="Script" path="res://Scripts/pickup.gd" id="1_7g6t2"]
-[ext_resource type="Texture2D" uid="uid://d1vii6drc3pwl" path="res://Sprites/temp pickup.png" id="2_i1g22"]
+[ext_resource type="Texture2D" uid="uid://cx7p8f6kdgma6" path="res://Sprites/crafting stations/hydroponic garden.png" id="2_2ghxu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uwlrn"]
-size = Vector2(32, 32)
+size = Vector2(32, 57)
 
 [node name="pickup" type="Area2D" groups=["pickup"]]
 script = ExtResource("1_7g6t2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_i1g22")
+position = Vector2(0, -32)
+scale = Vector2(3, 3)
+texture = ExtResource("2_2ghxu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -12.5)
+scale = Vector2(3, 1)
 shape = SubResource("RectangleShape2D_uwlrn")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

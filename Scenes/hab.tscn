@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://vho5kbdut2d5"]
+[gd_scene load_steps=10 format=3 uid="uid://vho5kbdut2d5"]
 
 [ext_resource type="Script" path="res://Scripts/hab.gd" id="1_aceko"]
 [ext_resource type="PackedScene" uid="uid://jbrvvua7jm0x" path="res://Prefabs/player.tscn" id="2_0acg8"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/HabArea.gd" id="5_7cp5n"]
 [ext_resource type="PackedScene" uid="uid://kg30ni6t80a" path="res://Prefabs/pickup.tscn" id="6_7mijq"]
 [ext_resource type="PackedScene" uid="uid://4rtf3xgf03ai" path="res://Prefabs/pickup2.tscn" id="7_i11n0"]
+[ext_resource type="Script" path="res://Scripts/Hydroponics.gd" id="8_wdcmo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x8cuc"]
 size = Vector2(183, 578)
@@ -54,10 +55,32 @@ position = Vector2(124, 608)
 shape = SubResource("RectangleShape2D_x8cuc")
 
 [node name="pickup" parent="." instance=ExtResource("6_7mijq")]
-position = Vector2(479, 865)
+position = Vector2(449, 878)
 
-[node name="pickup2" parent="." instance=ExtResource("7_i11n0")]
-position = Vector2(546, 863)
+[node name="hydroponics" parent="." instance=ExtResource("7_i11n0")]
+position = Vector2(368, 879)
+script = ExtResource("8_wdcmo")
+
+[node name="Hydro" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Panel" type="Panel" parent="Hydro"]
+offset_left = 487.0
+offset_top = 100.0
+offset_right = 669.0
+offset_bottom = 154.0
+
+[node name="Label" type="Label" parent="Hydro"]
+offset_left = 487.0
+offset_top = 101.0
+offset_right = 668.0
+offset_bottom = 169.0
+text = "Press 'E' To Use
+Hydroponics"
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="HabArea" to="." method="_on_hab_area_body_entered"]
 [connection signal="body_exited" from="HabArea" to="." method="_on_hab_area_body_exited"]
+[connection signal="body_entered" from="pickup" to="." method="_on_pickup_body_entered"]
+[connection signal="body_entered" from="hydroponics" to="." method="_on_hydroponics_body_entered"]
+[connection signal="body_exited" from="hydroponics" to="." method="_on_hydroponics_body_exited"]
