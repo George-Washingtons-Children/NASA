@@ -7,6 +7,8 @@ var oxygen = 1000
 var food = 1000
 var malfunctioning = false
 
+var watertank = true
+
 signal health_changed
 signal oxygen_changed
 signal hunger_changed

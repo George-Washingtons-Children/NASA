@@ -1,7 +1,8 @@
 extends Node
 
-var mats = 0
-
+var ice = 0
+var rock = 0
+var water = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

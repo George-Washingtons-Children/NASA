@@ -3,6 +3,14 @@ extends TileMap
 var holdCount = 2.3
 var holdTime = 0
 var tilepos
+
+var icecount
+var rockcount
+var watercount
+
+signal ice
+signal rock
+signal water
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -23,6 +31,10 @@ func _input(event):
 				get_node("Timer").start(holdCount)
 				#print(get_cell_atlas_coords(0, tilepos))
 				#set_cell(0, tilepos, 1, Vector2i(0,0))
+			if (get_cell_source_id(0, tilepos) == 7):
+				get_node("Timer").start(holdCount)
+			if (get_cell_source_id(0, tilepos) == 1 and $Player.):
+				get_node("Timer").start(holdCount)
 			elif (get_cell_source_id(0, tilepos) == -1):
 				#print(get_cell_atlas_coords(0, tilepos))
 				set_cell(0, tilepos, 2, Vector2i(0,0))
