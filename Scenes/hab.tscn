@@ -17,3 +17,9 @@ layer_0/tile_data = PackedInt32Array(1179648, 0, 0, 1245184, 0, 0, 1245185, 0, 0
 [node name="Player" parent="." instance=ExtResource("2_0acg8")]
 position = Vector2(576, 536)
 scale = Vector2(2, 2)
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 512.0
+offset_top = 320.0
+offset_right = 632.0
+offset_bottom = 464.0

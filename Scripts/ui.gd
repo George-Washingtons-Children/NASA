@@ -10,6 +10,8 @@ extends CanvasLayer
 
 @onready var select = [$Hotbar/Panel/oneSelect, $Hotbar/Panel/twoSelect, $Hotbar/Panel/threeSelect]
 
+@onready var malfunction = $malText
+
 func _ready():
 	print("first")
 
@@ -24,11 +26,9 @@ func update_hunger(value):
 	
 func update_ice(_value):
 	slot2.text = str(SystemManager.ice)
-	print("ice change")
 
 func update_rock(_value):
 	slot1.text = str(SystemManager.rock)
-	print("rock change")
 	
 func update_water(_value):
 	slot3.text = str(SystemManager.water)
@@ -40,3 +40,9 @@ func update_select(value):
 			select[i-1].visible = true
 		else:
 			select[i-1].visible = false
+			
+func update_mal(value):
+	if (value == true):
+		malfunction.visible = true
+	else:
+		malfunction.visible = false

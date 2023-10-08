@@ -29,7 +29,7 @@ func _process(delta):
 		
 func _input(event):
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and get_tree().current_scene.name != "Menu":
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "hab":
 			event = make_input_local(event)
 			tilepos = local_to_map(event.position)
 			print(tilepos)

@@ -172,7 +172,8 @@ theme_override_constants/outline_size = 2
 text = "0
 "
 
-[node name="Label" type="Label" parent="."]
+[node name="malText" type="Label" parent="."]
+visible = false
 offset_left = 16.0
 offset_top = 128.0
 offset_right = 244.0
