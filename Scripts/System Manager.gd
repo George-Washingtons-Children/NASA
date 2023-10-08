@@ -4,6 +4,48 @@ var ice = 0
 var rock = 0
 var water = 0
 
+var health = 10
+var oxygen = 1000
+var food = 1000
+var malfunctioning = false
+var rateMultiplier = 1
+
+var waterpack = false
+
+signal healthSig
+signal oxygenSig
+signal hungerSig
+
+func update_health(value):
+	health += value * rateMultiplier
+	emit_signal("healthSig", health)
+
+func update_oxygen(value):
+	if (oxygen >= 0 and oxygen <= 1000):
+		oxygen += value * rateMultiplier
+		emit_signal("oxygenSig", oxygen)
+		
+	if (oxygen < 0):
+			print("death by axphixiation")
+
+func update_hunger(value):
+	if(food >= 0 and food <= 1000):
+		food += value * rateMultiplier
+		emit_signal("hungerSig", food)
+	if (food < 0):
+		print("death by starvation")
+
+func waterpackUpdate(value):
+	waterpack = value
+	print("got water?")
+	
+func update_malfunction(value):
+	malfunctioning = value
+	if (malfunctioning == true):
+		rateMultiplier = 3
+	else:
+		rateMultiplier = 1
+	print(malfunctioning)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -16,5 +58,4 @@ func _process(delta):
 
 func _on_pickup_body_entered(body):
 	if (body.get_name() == "Player"):
-		mats += 1
-		print(mats)
+		pass

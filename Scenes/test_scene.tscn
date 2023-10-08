@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://7fpit5qtg3pi" path="res://Prefabs/system_manager.tscn" id="1_3iod3"]
 [ext_resource type="PackedScene" uid="uid://cmu8u2xsw2o55" path="res://Prefabs/Levels/level_design.tscn" id="1_3wgmd"]
-[ext_resource type="PackedScene" uid="uid://ccxtkd60ikn8e" path="res://Prefabs/player.tscn" id="1_j3wgp"]
+[ext_resource type="PackedScene" uid="uid://jbrvvua7jm0x" path="res://Prefabs/player.tscn" id="1_j3wgp"]
 [ext_resource type="PackedScene" uid="uid://0q525ldtw4m7" path="res://Prefabs/obstacle.tscn" id="3_vyxuk"]
 [ext_resource type="PackedScene" uid="uid://kg30ni6t80a" path="res://Prefabs/pickup.tscn" id="4_vscnb"]
 

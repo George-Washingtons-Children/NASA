@@ -1,17 +1,17 @@
 extends CharacterBody2D
 
-var health = 10
+var healthRate = -1
 var invinCount = 5
 var invinTime = 0
-var oxygen = 1000
-var food = 1000
-var malfunctioning = false
+var oxygenRate = -2
+var foodRate = -0.5
 
-var watertank = true
+signal watertank
 
 signal health_changed
 signal oxygen_changed
 signal hunger_changed
+signal malfunction
 
 var rng = RandomNumberGenerator.new()
 
@@ -70,9 +70,7 @@ func _physics_process(delta):
 			print("collided")
 			velocity.x = move_toward(-1 * velocity.x, 0, -1 * SPEED)
 			invinTime = invinCount
-			health -= 1
-			emit_signal("health_changed", health)
-			print(health)
+			emit_signal("health_changed", healthRate)
 		if collision.get_collider().is_in_group("pickup"):
 			print("pickup")
 		if collision.get_collider().is_in_group("Hab"):
@@ -87,17 +85,15 @@ func _physics_process(delta):
 	else:
 		get_node("MalfunctionTimer").set_paused(true)
 		
-	if (oxygen >= 0 and get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
-		oxygen -= delta * 2
-		emit_signal("oxygen_changed", oxygen)
-		if (oxygen < 0):
-			print("death by axphixiation")
+	if (get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
+		emit_signal("oxygen_changed", oxygenRate * delta)
 			
-	if (food >= 0 and get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
-		food -= delta * 0.5
-		emit_signal("hunger_changed", food)
-		if (food < 0):
-			print("death by starvation")
+	if (get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
+		emit_signal("hunger_changed", foodRate * delta)
+			
+			
+	#after crafting a watertank:
+	emit_signal("watertank", true)
 	
 
 func _on_pickup_area_entered(area):
@@ -107,7 +103,6 @@ func _on_pickup_area_entered(area):
 func _on_malfunction_timer_timeout():
 	var mal = rng.randi_range(1, 10)
 	if (mal == 1):
-		malfunctioning = true
+		emit_signal("malfunction", true)
 	print(mal)
-	print(malfunctioning)
 

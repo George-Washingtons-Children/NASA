@@ -31,9 +31,9 @@ func _input(event):
 				get_node("Timer").start(holdCount)
 				#print(get_cell_atlas_coords(0, tilepos))
 				#set_cell(0, tilepos, 1, Vector2i(0,0))
-			if (get_cell_source_id(0, tilepos) == 7):
+			elif (get_cell_source_id(0, tilepos) == 7):
 				get_node("Timer").start(holdCount)
-			if (get_cell_source_id(0, tilepos) == 1 and $Player.):
+			elif (get_cell_source_id(0, tilepos) == 1):
 				get_node("Timer").start(holdCount)
 			elif (get_cell_source_id(0, tilepos) == -1):
 				#print(get_cell_atlas_coords(0, tilepos))

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cmu8u2xsw2o55"]
 
-[ext_resource type="TileSet" uid="uid://bf7lm7pntq20o" path="res://Sprites/Tilesets/worldset.tres" id="1_ryo6e"]
+[ext_resource type="TileSet" uid="uid://c7gghqhod4myv" path="res://Sprites/Tilesets/worldset.tres" id="1_ryo6e"]
 [ext_resource type="Script" path="res://Prefabs/Levels/level_design.gd" id="2_6jhmd"]
 
 [node name="Level Design" type="TileMap" groups=["map"]]

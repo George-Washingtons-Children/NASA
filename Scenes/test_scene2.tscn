@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://6h4y1c3b8e4w"]
 
 [ext_resource type="PackedScene" uid="uid://cmu8u2xsw2o55" path="res://Prefabs/Levels/level_design.tscn" id="1_j8tlr"]
-[ext_resource type="PackedScene" uid="uid://ccxtkd60ikn8e" path="res://Prefabs/player.tscn" id="2_0raw3"]
+[ext_resource type="PackedScene" uid="uid://jbrvvua7jm0x" path="res://Prefabs/player.tscn" id="2_0raw3"]
 [ext_resource type="PackedScene" uid="uid://0q525ldtw4m7" path="res://Prefabs/obstacle.tscn" id="3_ryn5v"]
 
 [node name="Test Scene 2" type="Node2D"]
