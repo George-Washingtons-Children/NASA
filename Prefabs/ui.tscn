@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/ui.gd" id="1_kcmhm"]
 [ext_resource type="Script" path="res://Scripts/HealthBar.gd" id="2_hh08r"]
 [ext_resource type="Texture2D" uid="uid://cq0kdl5e8ut8r" path="res://Sprites/ui/heart.png" id="3_5t804"]
-[ext_resource type="Texture2D" uid="uid://cfcj2p436tste" path="res://Sprites/food/hotdog.png" id="4_e0h71"]
+[ext_resource type="Texture2D" uid="uid://wcb2nlmdj24q" path="res://Sprites/food/hotdog.png" id="4_e0h71"]
 [ext_resource type="Texture2D" uid="uid://c0rgb526b0agv" path="res://Sprites/ui/bubble.png" id="4_f8e3v"]
 [ext_resource type="Texture2D" uid="uid://dmit73x7qqvsq" path="res://Sprites/tiles/rock.png" id="5_6cjh1"]
 [ext_resource type="Texture2D" uid="uid://kdma515lhujp" path="res://Sprites/tiles/iceblock.png" id="6_gk0gw"]
