@@ -13,10 +13,6 @@ signal oxygen_changed
 signal hunger_changed
 signal malfunction
 
-var selectMat
-
-signal selectMatChange
-
 var rng = RandomNumberGenerator.new()
 
 @export var SPEED = 300.0
@@ -28,8 +24,10 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 # 1.4 m/2^2 = titan gravity
 # 980 / 9.81 * 1.4 = 139.857
 
-func _physics_process(delta):
+func _ready():
 	rng.randomize()
+
+func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -79,7 +77,7 @@ func _physics_process(delta):
 			print("pickup")
 		if collision.get_collider().is_in_group("Hab"):
 			pass
-
+			
 	if (invinTime > 0):
 		invinTime -= delta
 	
@@ -99,19 +97,7 @@ func _physics_process(delta):
 	#after crafting a watertank:
 	emit_signal("watertank", true)
 	
-	if (Input.is_key_pressed(KEY_1)):
-		selectMat = 1
-		SystemManager.select = selectMat
-		emit_signal("selectMatChange", selectMat)
-	elif (Input.is_key_pressed(KEY_2)):
-		selectMat = 2
-		SystemManager.select = selectMat
-		emit_signal("selectMatChange", selectMat)
-	elif (Input.is_key_pressed(KEY_3)):
-		selectMat = 3
-		SystemManager.select = selectMat
-		emit_signal("selectMatChange", selectMat)
-
+	
 func _on_pickup_area_entered(area):
 	print("pickup")
 
