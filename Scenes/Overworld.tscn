@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://cmu8u2xsw2o55" path="res://Prefabs/Levels/level_design.tscn" id="1_cy1aq"]
 [ext_resource type="Script" path="res://Overworld.gd" id="1_fnef2"]
-[ext_resource type="PackedScene" uid="uid://ccxtkd60ikn8e" path="res://Prefabs/player.tscn" id="2_n0pkd"]
+[ext_resource type="PackedScene" uid="uid://jbrvvua7jm0x" path="res://Prefabs/player.tscn" id="2_n0pkd"]
 [ext_resource type="PackedScene" uid="uid://0q525ldtw4m7" path="res://Prefabs/obstacle.tscn" id="3_2bdeo"]
-[ext_resource type="TileSet" uid="uid://bf7lm7pntq20o" path="res://Sprites/Tilesets/worldset.tres" id="3_yn5dn"]
+[ext_resource type="TileSet" uid="uid://c7gghqhod4myv" path="res://Sprites/Tilesets/worldset.tres" id="3_yn5dn"]
 [ext_resource type="PackedScene" uid="uid://dr6848j1p8ifc" path="res://Prefabs/ui.tscn" id="4_6l10v"]
 
 [node name="Overworld" type="Node2D"]
