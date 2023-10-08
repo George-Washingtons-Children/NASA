@@ -31,8 +31,8 @@ func update_ice(_value):
 func update_rock(_value):
 	slot1.text = str(SystemManager.rock)
 	
-func update_water(value):
-	wat.value = value
+func update_water(_value):
+	wat.value = SystemManager.water
 
 func update_iron(_value):
 	slot3.text = str(SystemManager.iron)
