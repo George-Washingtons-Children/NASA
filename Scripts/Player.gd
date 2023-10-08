@@ -46,6 +46,8 @@ func _physics_process(delta):
 			print(health)
 		if collision.get_collider().is_in_group("pickup"):
 			print("pickup")
+		if collision.get_collider().is_in_group("Hab"):
+			pass
 
 	if (invinTime > 0):
 		invinTime -= delta
