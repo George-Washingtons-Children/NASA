@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dftw3shibnind"
-path="res://.godot/imported/blast furnace.png-1b5363d94f94a1eb765d6df78d71fb99.ctex"
+uid="uid://wwrvyvgoow3h"
+path="res://.godot/imported/hab floor v2.png-03ea2cd778ac83690292736cd3e0f3ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/crafting stations/blast furnace.png"
-dest_files=["res://.godot/imported/blast furnace.png-1b5363d94f94a1eb765d6df78d71fb99.ctex"]
+source_file="res://Sprites/tiles/hab floor v2.png"
+dest_files=["res://.godot/imported/hab floor v2.png-03ea2cd778ac83690292736cd3e0f3ac.ctex"]
 
 [params]
 

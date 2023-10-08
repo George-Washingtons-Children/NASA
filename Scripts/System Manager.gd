@@ -55,7 +55,6 @@ func update_ice(value):
 	
 func update_rock(value):
 	rock += value
-	print(rock)
 	
 func update_water(value):
 	water += value
