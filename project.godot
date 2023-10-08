@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Titan City 3023"
-run/main_scene="res://Scenes/test_scene.tscn"
+run/main_scene="res://Scenes/Menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-SystemManager="*res://Scripts/System Manager.gd"
+Global="*res://Scripts/System Manager.gd"
 
 [physics]
 

@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkibrjdcyv38"]
+
+[ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_ucto8"]
+[ext_resource type="PackedScene" uid="uid://7fpit5qtg3pi" path="res://Prefabs/system_manager.tscn" id="2_gxvuv"]
+[ext_resource type="PackedScene" uid="uid://cmu8u2xsw2o55" path="res://Prefabs/Levels/level_design.tscn" id="3_u1udo"]
+[ext_resource type="PackedScene" uid="uid://kg30ni6t80a" path="res://Prefabs/pickup.tscn" id="4_devgi"]
+[ext_resource type="PackedScene" uid="uid://0q525ldtw4m7" path="res://Prefabs/obstacle.tscn" id="6_4mgiw"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_ucto8")
+
+[node name="System Manager" parent="." instance=ExtResource("2_gxvuv")]
+
+[node name="Level Design" parent="." instance=ExtResource("3_u1udo")]
+
+[node name="pickup" parent="." instance=ExtResource("4_devgi")]
+position = Vector2(776, 528)
+
+[node name="obstacle" parent="." instance=ExtResource("6_4mgiw")]
+position = Vector2(360, 528)
+
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 434.0
+offset_top = 89.0
+offset_right = 696.0
+offset_bottom = 212.0
+text = "PLAY"
+
+[node name="QuitButton" type="Button" parent="."]
+offset_left = 435.0
+offset_top = 270.0
+offset_right = 697.0
+offset_bottom = 392.0
+text = "EXIT GAME"
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 798.0
+offset_top = 209.0
+offset_right = 1015.0
+offset_bottom = 313.0
+text = "W - Jump
+A/D - Movement
+Hold left click - Break blocks
+something - Place blocks
+"
+vertical_alignment = 1
+metadata/_edit_group_ = true
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 796.0
+offset_top = 178.0
+offset_right = 1014.0
+offset_bottom = 204.0
+text = "Controls:"
+horizontal_alignment = 1
+metadata/_edit_group_ = true
+
+[connection signal="body_entered" from="pickup" to="System Manager" method="_on_pickup_body_entered"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

@@ -15,3 +15,64 @@ texture = ExtResource("2_qh4wd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_kct4l")
+
+[node name="MalfunctionTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+
+[node name="Control" type="Control" parent="."]
+layout_direction = 1
+layout_mode = 3
+anchor_left = 0.756
+anchor_right = 1.0
+offset_left = 168.0
+offset_top = -145.0
+offset_right = 380.0
+offset_bottom = -74.0
+grow_horizontal = 0
+
+[node name="UI" type="CanvasLayer" parent="Control"]
+
+[node name="HealthBar" type="ProgressBar" parent="Control/UI"]
+modulate = Color(1, 0.160784, 0.121569, 1)
+anchors_preset = -1
+anchor_left = 0.828125
+anchor_top = -0.0262346
+anchor_right = 1.0
+anchor_bottom = 0.0154321
+offset_left = -775.0
+offset_top = -196.0
+offset_right = -771.0
+offset_bottom = -192.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Health bar"
+step = 3.0
+value = 99.0
+fill_mode = 1
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="HungerBar" type="ProgressBar" parent="Control/UI"]
+modulate = Color(0.976471, 0.435294, 0, 1)
+anchors_preset = -1
+anchor_left = 0.44184
+anchor_top = 0.578704
+anchor_right = 0.618924
+anchor_bottom = 0.623457
+offset_left = -331.0
+offset_top = -556.0
+offset_right = -331.0
+offset_bottom = -553.79
+tooltip_text = "Hunger bar"
+step = 3.0
+value = 99.0
+fill_mode = 1
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[connection signal="timeout" from="MalfunctionTimer" to="." method="_on_malfunction_timer_timeout"]
