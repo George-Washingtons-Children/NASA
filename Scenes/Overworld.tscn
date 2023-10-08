@@ -2,10 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://cmu8u2xsw2o55" path="res://Prefabs/Levels/level_design.tscn" id="1_cy1aq"]
 [ext_resource type="Script" path="res://Overworld.gd" id="1_fnef2"]
-[ext_resource type="PackedScene" uid="uid://ccxtkd60ikn8e" path="res://Prefabs/player.tscn" id="2_n0pkd"]
+[ext_resource type="PackedScene" uid="uid://jbrvvua7jm0x" path="res://Prefabs/player.tscn" id="2_n0pkd"]
 [ext_resource type="PackedScene" uid="uid://0q525ldtw4m7" path="res://Prefabs/obstacle.tscn" id="3_2bdeo"]
-[ext_resource type="TileSet" uid="uid://bf7lm7pntq20o" path="res://Sprites/Tilesets/worldset.tres" id="3_yn5dn"]
+[ext_resource type="TileSet" uid="uid://c7gghqhod4myv" path="res://Sprites/Tilesets/worldset.tres" id="3_yn5dn"]
 [ext_resource type="PackedScene" uid="uid://dr6848j1p8ifc" path="res://Prefabs/ui.tscn" id="4_6l10v"]
+[ext_resource type="PackedScene" uid="uid://kg30ni6t80a" path="res://Prefabs/pickup.tscn" id="6_jg7si"]
 
 [node name="Overworld" type="Node2D"]
 script = ExtResource("1_fnef2")
@@ -16,10 +17,11 @@ tile_set = ExtResource("3_yn5dn")
 layer_0/tile_data = PackedInt32Array(1245184, 2, 0, 1245185, 2, 0, 1245186, 2, 0, 1245187, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245190, 2, 0, 1245191, 2, 0, 1245192, 2, 0, 1245193, 2, 0, 1245194, 2, 0, 1245195, 2, 0, 1245196, 2, 0, 1245197, 2, 0, 1245198, 2, 0, 1245199, 2, 0, 1245200, 2, 0, 1245201, 2, 0, 1245202, 2, 0, 1245203, 2, 0, 1245204, 2, 0, 1245205, 2, 0, 1245206, 2, 0, 1245207, 2, 0, 1179671, 2, 0, 1179670, 2, 0, 1179669, 2, 0, 1179668, 2, 0, 1179667, 2, 0, 1179666, 2, 0, 1179665, 2, 0, 1179664, 2, 0, 1179663, 2, 0, 1179662, 2, 0, 1179661, 2, 0, 1179660, 2, 0, 1179659, 2, 0, 1179658, 2, 0, 1179657, 2, 0, 1179656, 2, 0, 1179655, 2, 0, 1179654, 2, 0, 1179653, 2, 0, 1179652, 2, 0, 1179651, 2, 0, 1179650, 2, 0, 1179649, 2, 0, 1179648, 2, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_n0pkd")]
-position = Vector2(330, 560)
+position = Vector2(334, 544)
+scale = Vector2(2.00001, 2.00001)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(1.6, 1.6)
 limit_left = 0
 limit_top = 0
 limit_right = 1152
@@ -29,3 +31,6 @@ limit_bottom = 640
 position = Vector2(456, 520)
 
 [node name="UI" parent="." instance=ExtResource("4_6l10v")]
+
+[node name="pickup" parent="." instance=ExtResource("6_jg7si")]
+position = Vector2(160, 492)
