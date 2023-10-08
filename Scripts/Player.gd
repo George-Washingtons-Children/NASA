@@ -75,7 +75,7 @@ func _physics_process(delta):
 			print("pickup")
 		if collision.get_collider().is_in_group("Hab"):
 			pass
-
+			
 	if (invinTime > 0):
 		invinTime -= delta
 	
@@ -95,7 +95,7 @@ func _physics_process(delta):
 	#after crafting a watertank:
 	emit_signal("watertank", true)
 	
-
+	
 func _on_pickup_area_entered(area):
 	print("pickup")
 
