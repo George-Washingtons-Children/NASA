@@ -7,6 +7,8 @@
 [ext_resource type="AudioStream" uid="uid://pa8r2ljg02va" path="res://Sounds/Walking_Metal.mp3" id="5_ysn1f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s2d6j"]
+radius = 10.0
+height = 42.8571
 
 [sub_resource type="Animation" id="Animation_im0v8"]
 resource_name = "Fall"
@@ -106,6 +108,7 @@ frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
+scale = Vector2(0.7, 0.7)
 shape = SubResource("CapsuleShape2D_s2d6j")
 
 [node name="MalfunctionTimer" type="Timer" parent="."]
