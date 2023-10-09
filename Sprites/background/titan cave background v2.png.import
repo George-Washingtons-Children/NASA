@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://iefp027bf8vl"
-path="res://.godot/imported/titan cave background.png-38de5fdc45d13b285218fa1b05d52ffb.ctex"
+uid="uid://dbjcdcj3xc1p2"
+path="res://.godot/imported/titan cave background v2.png-05b22ba01d05ec1574112e28b5808b6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/background/titan cave background.png"
-dest_files=["res://.godot/imported/titan cave background.png-38de5fdc45d13b285218fa1b05d52ffb.ctex"]
+source_file="res://Sprites/background/titan cave background v2.png"
+dest_files=["res://.godot/imported/titan cave background v2.png-05b22ba01d05ec1574112e28b5808b6b.ctex"]
 
 [params]
 
