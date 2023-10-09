@@ -111,7 +111,7 @@ func _physics_process(delta):
 		emit_signal("oxygen_changed", oxygenRate * delta * -1)
 		
 	if (get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
-		emit_signal("hunger_changed", foodRate * delta * 50)
+		emit_signal("hunger_changed", foodRate * delta)
 			
 			
 	#after crafting a watertank:
