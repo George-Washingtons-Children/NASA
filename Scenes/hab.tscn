@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://kg30ni6t80a" path="res://Prefabs/pickup.tscn" id="6_7mijq"]
 [ext_resource type="PackedScene" uid="uid://4rtf3xgf03ai" path="res://Prefabs/pickup2.tscn" id="7_i11n0"]
 [ext_resource type="Script" path="res://Scripts/Hydroponics.gd" id="8_wdcmo"]
-[ext_resource type="Texture2D" uid="uid://dftw3shibnind" path="res://Sprites/crafting stations/blast furnace.png" id="9_2i1rj"]
-[ext_resource type="Texture2D" uid="uid://baqrh16ahcipn" path="res://Sprites/crafting stations/coal powered generator.png" id="10_ej4dy"]
+[ext_resource type="Texture2D" uid="uid://dcgrfrskwb7rd" path="res://Sprites/crafting stations/blast furnace.png" id="9_2i1rj"]
+[ext_resource type="Texture2D" uid="uid://xxa6ch5aqjdq" path="res://Sprites/crafting stations/coal powered generator.png" id="10_ej4dy"]
 [ext_resource type="Texture2D" uid="uid://ckdd6gvbx7yfa" path="res://Sprites/crafting stations/constructor.png" id="11_hf1my"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x8cuc"]
