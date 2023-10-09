@@ -3,8 +3,8 @@ extends CharacterBody2D
 var healthRate = -2
 var invinCount = 5
 var invinTime = 0
-var oxygenRate = -600
-var foodRate = -300
+var oxygenRate = -6
+var foodRate = -3
 
 signal watertank
 

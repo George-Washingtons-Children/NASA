@@ -47,6 +47,9 @@ script = ExtResource("5_7cp5n")
 position = Vector2(124, 608)
 shape = SubResource("RectangleShape2D_x8cuc")
 
+[node name="pickup" parent="." instance=ExtResource("6_7mijq")]
+position = Vector2(449, 878)
+
 [node name="Player" parent="." instance=ExtResource("2_0acg8")]
 position = Vector2(143, 854)
 scale = Vector2(2, 2)
@@ -56,9 +59,6 @@ limit_left = 0
 limit_top = 0
 limit_right = 1500
 limit_bottom = 1000
-
-[node name="pickup" parent="." instance=ExtResource("6_7mijq")]
-position = Vector2(449, 878)
 
 [node name="hydroponics" parent="." instance=ExtResource("7_i11n0")]
 position = Vector2(368, 879)
