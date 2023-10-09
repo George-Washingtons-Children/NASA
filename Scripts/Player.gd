@@ -3,8 +3,8 @@ extends CharacterBody2D
 var healthRate = -2
 var invinCount = 5
 var invinTime = 0
-var oxygenRate = -2
-var foodRate = -0.5
+var oxygenRate = -5
+var foodRate = -3
 
 signal watertank
 
@@ -105,17 +105,23 @@ func _physics_process(delta):
 	else:
 		get_node("MalfunctionTimer").set_paused(true)
 		
-	if (get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
+	if (get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab" and SystemManager.oxygen > 0):
 		emit_signal("oxygen_changed", oxygenRate * delta)
 	elif (get_tree().current_scene.name == "Hab"):
 		emit_signal("oxygen_changed", oxygenRate * delta * -1)
 		
-	if (get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
+	if (get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab" and SystemManager.food > 0):
 		emit_signal("hunger_changed", foodRate * delta)
 			
 	if (SystemManager.food > 800 and SystemManager.health < 10):
 		emit_signal("health_changed", healthRate * -0.1 * delta)
 		emit_signal("hunger_changed", foodRate * delta)
+	
+	if (SystemManager.food <= 0):
+		emit_signal("health_changed", healthRate * 0.25 * delta)
+	
+	if (SystemManager.oxygen <= 0):
+		emit_signal("health_changed", healthRate * 0.5 * delta)
 	
 	#after crafting a watertank:
 	emit_signal("watertank", true)
@@ -123,15 +129,14 @@ func _physics_process(delta):
 	if (Input.is_key_pressed(KEY_1)):
 		selectMat = 1
 		SystemManager.select = selectMat
-		emit_signal("selectMatChange", selectMat)
 	elif (Input.is_key_pressed(KEY_2)):
 		selectMat = 2
 		SystemManager.select = selectMat
-		emit_signal("selectMatChange", selectMat)
 	elif (Input.is_key_pressed(KEY_3)):
 		selectMat = 3
 		SystemManager.select = selectMat
-		emit_signal("selectMatChange", selectMat)
+	SystemManager.select = selectMat
+	emit_signal("selectMatChange", SystemManager.select)
 
 func _on_pickup_area_entered(area):
 	print("pickup")
