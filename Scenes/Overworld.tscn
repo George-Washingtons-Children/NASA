@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Overworld.gd" id="1_fnef2"]
 [ext_resource type="PackedScene" uid="uid://jbrvvua7jm0x" path="res://Prefabs/player.tscn" id="2_n0pkd"]
 [ext_resource type="PackedScene" uid="uid://0q525ldtw4m7" path="res://Prefabs/obstacle.tscn" id="3_2bdeo"]
-[ext_resource type="PackedScene" path="res://Prefabs/ui.tscn" id="4_6l10v"]
+[ext_resource type="PackedScene" uid="uid://dr6848j1p8ifc" path="res://Prefabs/ui.tscn" id="4_6l10v"]
 [ext_resource type="Script" path="res://Scripts/HabArea.gd" id="6_c5hys"]
 [ext_resource type="PackedScene" uid="uid://kg30ni6t80a" path="res://Prefabs/pickup.tscn" id="7_v6ekr"]
 
