@@ -5,12 +5,14 @@ signal pickup
 func _ready():
 	pass
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
 func _on_body_entered(body):
 	if (body.get_name() == "Player"):
-		emit_signal("pickup")
-		queue_free()
+		if(SystemManager.food < 1000 && SystemManager.food > 0):
+			SystemManager.food += 333;
+			SystemManager.food = minf(SystemManager.food, 1000);
+			emit_signal("hungerSig", SystemManager.food)
+			queue_free()

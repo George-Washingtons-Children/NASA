@@ -19,9 +19,16 @@ signal healthSig
 signal oxygenSig
 signal hungerSig
 
+
 func update_health(value):
 	health += value * rateMultiplier
 	emit_signal("healthSig", health)
+	check_death(health)
+
+func check_death(curHealth):
+	if (curHealth <= 0):
+		get_tree().change_scene_to_file("res://Scenes/Game Over.tscn")
+		health = 10
 
 func update_oxygen(value):
 	if (oxygen >= 0 and oxygen <= 1000):
@@ -72,11 +79,6 @@ func _process(delta):
 	emit_signal("oxygenSig", oxygen)
 	emit_signal("hungerSig", food)
 
-func _on_pickup_body_entered(body):
-	if (body.get_name() == "Player"):
-		if(food < 1000 && food > 0):
-			food += 333;
-			emit_signal("hungerSig", food)
 			
 func checkInHab():
 	if(get_tree().current_scene.name == "Hab"):

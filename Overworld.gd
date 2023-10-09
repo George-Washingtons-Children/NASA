@@ -6,7 +6,7 @@ signal enteredHab
 func _ready():
 	$Player.health_changed.connect($"/root/SystemManager".update_health)
 	$Player.oxygen_changed.connect($"/root/SystemManager".update_oxygen)
-	$Player.hunger_changed.connect($"/root/SystemManager".update_hunger)
+	$Player.hunger_changed.connect($"/root/SystemManager".update_hunger)	
 	$Player.malfunction.connect($"/root/SystemManager".update_malfunction)
 	$Player.malfunction.connect($UI.update_mal)
 	
@@ -25,6 +25,7 @@ func _ready():
 	$"/root/SystemManager".hungerSig.connect($UI.update_hunger)
 	
 	$Player.selectMatChange.connect($UI.update_select)
+	
 	
 	inHab = false;
 
