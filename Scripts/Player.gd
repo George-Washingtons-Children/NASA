@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var healthRate = -1
+var healthRate = -2
 var invinCount = 5
 var invinTime = 0
 var oxygenRate = -2
@@ -113,7 +113,10 @@ func _physics_process(delta):
 	if (get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
 		emit_signal("hunger_changed", foodRate * delta)
 			
-			
+	if (SystemManager.food > 800 and SystemManager.health < 10):
+		emit_signal("health_changed", healthRate * -0.1 * delta)
+		emit_signal("hunger_changed", emit_signal("hunger_changed", foodRate * delta * 0.5))
+	
 	#after crafting a watertank:
 	emit_signal("watertank", true)
 	
