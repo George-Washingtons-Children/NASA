@@ -1,17 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://kg30ni6t80a"]
 
 [ext_resource type="Script" path="res://Scripts/pickup.gd" id="1_71cke"]
-[ext_resource type="Texture2D" uid="uid://wcb2nlmdj24q" path="res://Sprites/food/hotdog.png" id="2_m2kum"]
+[ext_resource type="Texture2D" uid="uid://cfcj2p436tste" path="res://Sprites/food/hotdog.png" id="2_sne1r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uwlrn"]
 size = Vector2(32, 32)
 
-[node name="pickup" type="Area2D" groups=["pickup"]]
+[node name="pickup2" type="Area2D" groups=["pickup"]]
 script = ExtResource("1_71cke")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2, 2)
-texture = ExtResource("2_m2kum")
+texture = ExtResource("2_sne1r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_uwlrn")

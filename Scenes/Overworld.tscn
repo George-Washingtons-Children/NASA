@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://c85d6ofwjfaui"]
+[gd_scene load_steps=12 format=3 uid="uid://c85d6ofwjfaui"]
 
 [ext_resource type="PackedScene" uid="uid://cmu8u2xsw2o55" path="res://Prefabs/Levels/level_design.tscn" id="1_cy1aq"]
 [ext_resource type="Script" path="res://Overworld.gd" id="1_fnef2"]
+[ext_resource type="Texture2D" uid="uid://ba28idxbou3uu" path="res://Sprites/background/titan land.png" id="2_cu2bt"]
 [ext_resource type="PackedScene" uid="uid://jbrvvua7jm0x" path="res://Prefabs/player.tscn" id="2_n0pkd"]
 [ext_resource type="PackedScene" uid="uid://0q525ldtw4m7" path="res://Prefabs/obstacle.tscn" id="3_2bdeo"]
-[ext_resource type="PackedScene" uid="uid://ckht4cuu7fgrk" path="res://Prefabs/ui.tscn" id="4_6l10v"]
+[ext_resource type="Texture2D" uid="uid://dbjcdcj3xc1p2" path="res://Sprites/background/titan cave background v2.png" id="3_bfutd"]
+[ext_resource type="PackedScene" uid="uid://dr6848j1p8ifc" path="res://Prefabs/ui.tscn" id="4_6l10v"]
 [ext_resource type="AudioStream" uid="uid://seasfy1b7ggc" path="res://Sounds/Burp.mp3" id="4_c4e8h"]
 [ext_resource type="Script" path="res://Scripts/HabArea.gd" id="6_c5hys"]
 [ext_resource type="PackedScene" uid="uid://kg30ni6t80a" path="res://Prefabs/pickup.tscn" id="7_v6ekr"]
@@ -14,6 +16,21 @@ size = Vector2(164, 101)
 
 [node name="Overworld" type="Node2D"]
 script = ExtResource("1_fnef2")
+
+[node name="skybackground" type="Sprite2D" parent="."]
+position = Vector2(-836, 1044)
+scale = Vector2(4.51875, 2.9)
+texture = ExtResource("2_cu2bt")
+
+[node name="cavebackground" type="Sprite2D" parent="."]
+position = Vector2(596, 1774)
+scale = Vector2(2.28125, 1.77222)
+texture = ExtResource("3_bfutd")
+
+[node name="cavebackground2" type="Sprite2D" parent="."]
+position = Vector2(-2288, 1774)
+scale = Vector2(2.28125, 1.77222)
+texture = ExtResource("3_bfutd")
 
 [node name="Level Design" parent="." instance=ExtResource("1_cy1aq")]
 scale = Vector2(2, 2)
@@ -29,11 +46,11 @@ stream = ExtResource("4_c4e8h")
 autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(1.4, 1.4)
-limit_left = -10000
+zoom = Vector2(1.2, 1.2)
+limit_left = -3744
 limit_top = 0
-limit_right = 10000
-limit_bottom = 3000
+limit_right = 2080
+limit_bottom = 2400
 
 [node name="obstacle" parent="." instance=ExtResource("3_2bdeo")]
 position = Vector2(132, 497)

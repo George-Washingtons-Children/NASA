@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://Scripts/hab.gd" id="1_aceko"]
 [ext_resource type="PackedScene" uid="uid://jbrvvua7jm0x" path="res://Prefabs/player.tscn" id="2_0acg8"]
 [ext_resource type="PackedScene" uid="uid://cmu8u2xsw2o55" path="res://Prefabs/Levels/level_design.tscn" id="2_x3i2q"]
-[ext_resource type="PackedScene" uid="uid://ckht4cuu7fgrk" path="res://Prefabs/ui.tscn" id="3_0nvf4"]
+[ext_resource type="PackedScene" uid="uid://dr6848j1p8ifc" path="res://Prefabs/ui.tscn" id="3_0nvf4"]
 [ext_resource type="Script" path="res://Scripts/HabArea.gd" id="5_7cp5n"]
 [ext_resource type="PackedScene" uid="uid://kg30ni6t80a" path="res://Prefabs/pickup.tscn" id="6_7mijq"]
-[ext_resource type="PackedScene" path="res://Prefabs/pickup2.tscn" id="7_i11n0"]
+[ext_resource type="PackedScene" uid="uid://4rtf3xgf03ai" path="res://Prefabs/pickup2.tscn" id="7_i11n0"]
 [ext_resource type="Script" path="res://Scripts/Hydroponics.gd" id="8_wdcmo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x8cuc"]

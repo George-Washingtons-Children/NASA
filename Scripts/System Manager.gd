@@ -34,7 +34,8 @@ func update_oxygen(value):
 	if (oxygen >= 0 and oxygen <= 1000):
 		oxygen += value * rateMultiplier
 		emit_signal("oxygenSig", oxygen)
-		
+
+	
 	if (oxygen < 0):
 		get_tree().change_scene_to_file("res://Scenes/Game Over.tscn")
 		oxygen = 1000;

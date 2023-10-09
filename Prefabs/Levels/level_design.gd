@@ -33,7 +33,8 @@ func _input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "hab":
 			event = make_input_local(event)
 			tilepos = local_to_map(event.position)
-			print(tilepos)
+			if (get_cell_source_id(0, tilepos) != -1 and get_node("Break").playing == false):
+				get_node("Break").play()
 			sourceid = get_cell_source_id(0, tilepos)
 			if (get_cell_source_id(0, tilepos) == 2):
 				get_node("Timer").start(holdCount)
@@ -60,6 +61,7 @@ func _input(event):
 					emit_signal("ice", -1)
 		if event.pressed == false:
 			get_node("Timer").stop()
+			get_node("Break").stop()
 
 
 func _on_timer_timeout():
