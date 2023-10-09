@@ -36,15 +36,16 @@ func update_oxygen(value):
 		emit_signal("oxygenSig", oxygen)
 		
 	if (oxygen < 0):
-			print("death by axphixiation")
+		get_tree().change_scene_to_file("res://Scenes/Game Over.tscn")
+		oxygen = 1000;
 
 func update_hunger(value):
 	if(food >= 0 and food <= 1000):
 		food += value * rateMultiplier
 		emit_signal("hungerSig", food)
 	if (food < 0):
-		print("death by starvation")
-
+		get_tree().change_scene_to_file("res://Scenes/Game Over.tscn")
+		food = 1000;
 func waterpackUpdate(value):
 	waterpack = value
 	print("got water?")
