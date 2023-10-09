@@ -115,7 +115,7 @@ func _physics_process(delta):
 			
 	if (SystemManager.food > 800 and SystemManager.health < 10):
 		emit_signal("health_changed", healthRate * -0.1 * delta)
-		emit_signal("hunger_changed", emit_signal("hunger_changed", foodRate * delta * 0.5))
+		emit_signal("hunger_changed", foodRate * delta)
 	
 	#after crafting a watertank:
 	emit_signal("watertank", true)
