@@ -47,6 +47,16 @@ script = ExtResource("5_7cp5n")
 position = Vector2(124, 608)
 shape = SubResource("RectangleShape2D_x8cuc")
 
+[node name="Player" parent="." instance=ExtResource("2_0acg8")]
+position = Vector2(143, 854)
+scale = Vector2(2, 2)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+limit_left = 0
+limit_top = 0
+limit_right = 1500
+limit_bottom = 1000
+
 [node name="pickup" parent="." instance=ExtResource("6_7mijq")]
 position = Vector2(449, 878)
 
@@ -86,16 +96,6 @@ texture = ExtResource("10_ej4dy")
 position = Vector2(856, 864)
 scale = Vector2(2, 2)
 texture = ExtResource("11_hf1my")
-
-[node name="Player" parent="." instance=ExtResource("2_0acg8")]
-position = Vector2(143, 854)
-scale = Vector2(2, 2)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-limit_left = 0
-limit_top = 0
-limit_right = 1500
-limit_bottom = 1000
 
 [connection signal="body_entered" from="HabArea" to="." method="_on_hab_area_body_entered"]
 [connection signal="body_exited" from="HabArea" to="." method="_on_hab_area_body_exited"]

@@ -3,8 +3,8 @@ extends CharacterBody2D
 var healthRate = -2
 var invinCount = 5
 var invinTime = 0
-var oxygenRate = -6
-var foodRate = -3
+var oxygenRate = -600
+var foodRate = -300
 
 signal watertank
 
@@ -105,12 +105,12 @@ func _physics_process(delta):
 	else:
 		get_node("MalfunctionTimer").set_paused(true)
 		
-	if (get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
+	if (get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab" and SystemManager.oxygen > 0):
 		emit_signal("oxygen_changed", oxygenRate * delta)
 	elif (get_tree().current_scene.name == "Hab"):
 		emit_signal("oxygen_changed", oxygenRate * delta * -1)
 		
-	if (get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab"):
+	if (get_tree().current_scene.name != "Menu" and get_tree().current_scene.name != "Hab" and SystemManager.food > 0):
 		emit_signal("hunger_changed", foodRate * delta)
 			
 	if (SystemManager.food > 800 and SystemManager.health < 10):
