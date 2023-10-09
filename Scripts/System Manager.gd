@@ -73,8 +73,12 @@ func _process(delta):
 	emit_signal("hungerSig", food)
 
 func _on_pickup_body_entered(body):
+	print("first check")
 	if (body.get_name() == "Player"):
-		if(food < 1000 && food > 0):
+		print("second check")
+		if(food > 0):
+			print("third check")
+			get_node("Eating").play()
 			food += 333;
 			emit_signal("hungerSig", food)
 			

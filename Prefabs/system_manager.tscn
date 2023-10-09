@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://7fpit5qtg3pi"]
+[gd_scene load_steps=3 format=3 uid="uid://7fpit5qtg3pi"]
 
 [ext_resource type="Script" path="res://Scripts/System Manager.gd" id="1_70cgf"]
+[ext_resource type="AudioStream" uid="uid://du6ek5i8iopto" path="res://Sounds/Eating.mp3" id="2_5m7be"]
 
 [node name="System Manager" type="Node"]
 script = ExtResource("1_70cgf")
+
+[node name="Eating" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_5m7be")
