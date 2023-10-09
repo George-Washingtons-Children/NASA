@@ -14,4 +14,4 @@ Contributions
 
 Made with Godot 4.1
 
-Machinery objects in the game are just <ins>placeholders</ins> **except for the hydroponic garden**, which works to some degree
+Machinery objects in the game are just <u>placeholders</u> **except for the hydroponic garden**, which works to some degree
