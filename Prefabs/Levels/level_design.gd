@@ -1,6 +1,6 @@
 extends TileMap
 
-var holdCount = 1.7
+var holdCount = 0.5
 var holdTime = 0
 var tilepos
 
