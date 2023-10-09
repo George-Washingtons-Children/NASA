@@ -70,6 +70,18 @@ func _physics_process(delta):
 	elif(velocity.x > 0):
 		get_node("Sprite2D").flip_h = true
 		$AnimationPlayer.play ("Walking");
+		
+	if (velocity.x != 0 and is_on_floor()): 
+		if (get_tree().current_scene.name == "Overworld" and get_node("Walk").playing == false):
+			print(velocity.x)
+			get_node("Walk").play()
+			get_node("WalkMetal").stop()
+		elif (get_tree().current_scene.name == "Hab" and get_node("WalkMetal").playing == false):
+			get_node("Walk").stop()
+			get_node("WalkMetal").play()
+	else:
+		get_node("Walk").stop()
+		get_node("WalkMetal").stop()
 	
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
@@ -78,6 +90,7 @@ func _physics_process(delta):
 			velocity.x = move_toward(-1 * velocity.x, 0, -1 * SPEED)
 			invinTime = invinCount
 			emit_signal("health_changed", healthRate)
+			get_node("Hurt").play()
 		if collision.get_collider().is_in_group("pickup"):
 			print("pickup")
 		if collision.get_collider().is_in_group("Hab"):

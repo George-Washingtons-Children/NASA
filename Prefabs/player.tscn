@@ -1,7 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://jbrvvua7jm0x"]
+[gd_scene load_steps=13 format=3 uid="uid://jbrvvua7jm0x"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_xjkh7"]
 [ext_resource type="Texture2D" uid="uid://diok4e1cduqn1" path="res://Sprites/Player/astronaut v2.png" id="2_n8alp"]
+[ext_resource type="AudioStream" uid="uid://dqhaul8sv1ws8" path="res://Sounds/Grunt1.mp3" id="3_py4sj"]
+[ext_resource type="AudioStream" uid="uid://6887erag6gmc" path="res://Sounds/Walking.mp3" id="4_6ja5r"]
+[ext_resource type="AudioStream" uid="uid://pa8r2ljg02va" path="res://Sounds/Walking_Metal.mp3" id="5_ysn1f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s2d6j"]
 
@@ -106,12 +109,21 @@ position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_s2d6j")
 
 [node name="MalfunctionTimer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 960.0
 autostart = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_qqjyg")
 }
+
+[node name="Hurt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_py4sj")
+
+[node name="Walk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_6ja5r")
+
+[node name="WalkMetal" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ysn1f")
 
 [connection signal="timeout" from="MalfunctionTimer" to="." method="_on_malfunction_timer_timeout"]
