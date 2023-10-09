@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://n33buohxmqd4"]
+[gd_scene load_steps=4 format=3 uid="uid://n33buohxmqd4"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_prlca"]
 [ext_resource type="Texture2D" uid="uid://ba28idxbou3uu" path="res://Sprites/background/titan land.png" id="2_n1vmg"]
+[ext_resource type="AudioStream" uid="uid://bvkuxsfft2a03" path="res://Sounds/Death3.mp3" id="3_h3f1w"]
 
 [node name="Game Over" type="Node2D"]
 script = ExtResource("1_prlca")
@@ -27,5 +28,9 @@ offset_right = 816.0
 offset_bottom = 456.0
 theme_override_font_sizes/font_size = 40
 text = "Return to Main Menu"
+
+[node name="Death Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_h3f1w")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_return_to_menu_button_pressed"]

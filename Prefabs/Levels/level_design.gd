@@ -19,6 +19,7 @@ func _ready():
 	emit_signal("water", 1)
 	emit_signal("rock", 1)
 	emit_signal("ice", 1)
+	emit_signal("iron", 1)
 	print("Second")
 
 
@@ -27,6 +28,7 @@ func _process(delta):
 	emit_signal("water", 0)
 	emit_signal("rock", 0)
 	emit_signal("ice", 0)
+	emit_signal("iron", 0)
 		
 func _input(event):
 	if event is InputEventMouseButton:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c85d6ofwjfaui"]
+[gd_scene load_steps=11 format=3 uid="uid://c85d6ofwjfaui"]
 
 [ext_resource type="PackedScene" uid="uid://cmu8u2xsw2o55" path="res://Prefabs/Levels/level_design.tscn" id="1_cy1aq"]
 [ext_resource type="Script" path="res://Overworld.gd" id="1_fnef2"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://0q525ldtw4m7" path="res://Prefabs/obstacle.tscn" id="3_2bdeo"]
 [ext_resource type="Texture2D" uid="uid://dbjcdcj3xc1p2" path="res://Sprites/background/titan cave background v2.png" id="3_bfutd"]
 [ext_resource type="PackedScene" uid="uid://dr6848j1p8ifc" path="res://Prefabs/ui.tscn" id="4_6l10v"]
-[ext_resource type="AudioStream" uid="uid://seasfy1b7ggc" path="res://Sounds/Burp.mp3" id="4_c4e8h"]
 [ext_resource type="Script" path="res://Scripts/HabArea.gd" id="6_c5hys"]
 [ext_resource type="PackedScene" uid="uid://kg30ni6t80a" path="res://Prefabs/pickup.tscn" id="7_v6ekr"]
 
@@ -39,11 +38,6 @@ layer_0/tile_data = PackedInt32Array(1245184, 2, 0, 1245185, 2, 0, 1245186, 2, 0
 [node name="Player" parent="." instance=ExtResource("2_n0pkd")]
 position = Vector2(337, 543)
 scale = Vector2(2, 2)
-
-[node name="Sound FX" type="AudioStreamPlayer2D" parent="Player"]
-scale = Vector2(0.5, 0.5)
-stream = ExtResource("4_c4e8h")
-autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.2, 1.2)
