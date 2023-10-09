@@ -80,6 +80,7 @@ func _process(delta):
 	emit_signal("healthSig", health)
 	emit_signal("oxygenSig", oxygen)
 	emit_signal("hungerSig", food)
+	
 
 			
 func checkInHab():
